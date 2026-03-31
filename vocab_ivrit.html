@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>עברית מן ההתחלה — Vocabulaire יחידות א׳–ז׳ + פסק זמן + שיעורים 1–9</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew:wght@300;400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --parchment:     #f5edd6;
+    --parchment-dk:  #e8d9b8;
+    --parchment-dkr: #d6c89a;
+    --ink:           #2c1a0e;
+    --ink-light:     #5a3e28;
+    --red:           #8b1a1a;
+    --gold:          #b8860b;
+    --gold-light:    #d4a843;
+    --blue:          #1a4a6b;
+    --green:         #2d5a27;
+    --shadow:        rgba(44,26,14,0.18);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--parchment-dk);
+    background-image:
+      radial-gradient(ellipse at 20% 10%, rgba(184,134,11,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 90%, rgba(139,26,26,0.06) 0%, transparent 60%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    font-family: 'Crimson Pro', Georgia, serif;
+    color: var(--ink);
+    min-height: 100vh;
+    padding: 0 0 60px 0;
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--ink);
+    background-image: linear-gradient(135deg, #2c1a0e 0%, #4a2c16 50%, #2c1a0e 100%);
+    padding: 28px 40px 22px;
+    text-align: center;
+    border-bottom: 4px solid var(--gold);
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M30 5 L55 50 H5 Z' fill='none' stroke='rgba(212,168,67,0.08)' stroke-width='1'/%3E%3C/svg%3E") repeat;
+    pointer-events: none;
+  }
+  .header-heb {
+    font-family: 'Noto Serif Hebrew', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--gold-light);
+    letter-spacing: 0.03em;
+    line-height: 1.3;
+    direction: rtl;
+  }
+  .header-sub {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.1rem;
+    color: var(--parchment-dk);
+    font-style: italic;
+    margin-top: 4px;
+    opacity: 0.85;
+  }
+  .header-badge {
+    display: inline-block;
+    margin-top: 10px;
+    background: var(--red);
+    color: var(--parchment);
+    font-family: 'Noto Serif Hebrew', serif;
+    font-size: 0.85rem;
+    padding: 3px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(212,168,67,0.4);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── NAV TABS ── */
+  .tab-bar {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    padding: 20px 20px 0;
+    flex-wrap: wrap;
+  }
+  .tab-btn {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 8px 22px;
+    border: 2px solid var(--parchment-dkr);
+    background: var(--parchment);
+    color: var(--ink-light);
+    border-radius: 6px 6px 0 0;
+    cursor: pointer;
+    transition: all .2s;
+    border-bottom: none;
+  }
+  .tab-btn:hover { background: var(--parchment-dk); color: var(--ink); }
+  .tab-btn.active {
+    background: var(--ink);
+    color: var(--gold-light);
+    border-color: var(--ink);
+  }
+
+  /* ── MAIN PANEL ── */
+  .panel {
+    max-width: 980px;
+    margin: 0 auto;
+    background: var(--parchment);
+    border: 2px solid var(--parchment-dkr);
+    border-top: 4px solid var(--gold);
+    border-radius: 0 0 8px 8px;
+    padding: 30px 36px 36px;
+    box-shadow: 0 6px 32px var(--shadow);
+  }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+
+  /* ── SECTION TITLE ── */
+  .section-title {
+    font-family: 'Noto Serif Hebrew', serif;
+    font-size: 1.4rem;
+    color: var(--red);
+    border-bottom: 2px solid var(--parchment-dkr);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    direction: rtl;
+    font-weight: 700;
+  }
+  .section-title span {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--ink-light);
+    direction: ltr;
+    font-weight: 400;
+  }
+
+  /* ── VOCAB TABLE ── */
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  .vocab-card {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    background: var(--parchment-dk);
+    border: 1px solid var(--parchment-dkr);
+    border-radius: 6px;
+    padding: 8px 12px;
+    transition: box-shadow .15s;
+  }
+  .vocab-card:hover { box-shadow: 0 2px 10px var(--shadow); }
+  .v-heb {
+    font-family: 'Noto Serif Hebrew', serif;
+    font-size: 1.25rem;
+    color: var(--ink);
+    direction: rtl;
+    text-align: right;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  .v-sep { color: var(--gold); font-size: 1.1rem; }
+  .v-fr {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1rem;
+    color: var(--ink-light);
+    font-style: italic;
+  }
+  .v-trans {
+    font-size: 0.78rem;
+    color: var(--blue);
+    font-family: 'Crimson Pro', serif;
+    direction: rtl;
+    text-align: right;
+  }
+
+  /* ── UNIT BADGE ── */
+  .unit-badge {
+    display: inline-block;
+    font-family: 'Noto Serif Hebrew', serif;
+    font-size: 0.75rem;
+    background: var(--red);
+    color: #fff;
+    border-radius: 4px;
+    padding: 1px 7px;
+    margin-bottom: 12px;
+    direction: rtl;
+    font-weight: 600;
+  }
+
+  /* ── CATEGORY FILTER ── */
+  .cat-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 18px;
+    align-items: center;
+  }
+  .cat-label {
+    font-family: 'Crimson Pro', serif;
+    font-size: 0.95rem;
+    color: var(--ink-light);
+    margin-right: 4px;
+    font-style: italic;
+  }
+  .cat-btn {
+    font-family: 'Crimson Pro', serif;
+    font-size: 0.88rem;
+    padding: 4px 13px;
+    border: 1.5px solid var(--parchment-dkr);
+    background: var(--parchment);
+    color: var(--ink-light);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all .15s;
+  }
+  .cat-btn:hover { border-color: var(--gold); color: var(--ink); }
+  .cat-btn.active { background: var(--ink); color: var(--gold-light); border-color: var(--ink); }
+  .ctrl-btn {
+    font-family: 'Crimson Pro', serif;
+    font-size: 0.82rem;
+    padding: 3px 10px;
+    border: 1.5px solid var(--parchment-dkr);
+    background: var(--parchment-dk);
+    color: var(--ink-light);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .15s;
+    margin-left: 4px;
+  }
+  .ctrl-btn:hover { background: var(--ink); color: var(--parchment); }
+
+  /* ── EXERCISE COMMON ── */
+  .ex-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .score-box {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1rem;
+    color: var(--ink-light);
+    background: var(--parchment-dk);
+    border: 1.5px solid var(--parchment-dkr);
+    padding: 5px 16px;
+    border-radius: 20px;
+  }
+  .score-box strong { color: var(--red); font-size: 1.15rem; }
+  .btn-restart {
+    font-family: 'Crimson Pro', serif;
+    font-size: 0.92rem;
+    padding: 6px 18px;
+    background: var(--ink);
+    color: var(--gold-light);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: opacity .15s;
+  }
+  .btn-restart:hover { opacity: 0.85; }
+
+  /* ── VRAI/FAUX ── */
+  .vf-card {
+    background: var(--parchment-dk);
+    border: 2px solid var(--parchment-dkr);
+    border-radius: 10px;
+    padding: 22px 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: border-color .2s;
+  }
+  .vf-card.correct { border-color: var(--green); background: #eaf5e8; }
+  .vf-card.wrong   { border-color: var(--red);   background: #faeaea; }
+  .vf-word {
+    font-family: 'Noto Serif Hebrew', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--ink);
+    direction: rtl;
+    margin-bottom: 4px;
+  }
+  .vf-proposed {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--blue);
+    margin-bottom: 16px;
+  }
+  .vf-btns { display: flex; gap: 14px; justify-content: center; }
+  .vf-btn {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 9px 32px;
+    border: 2px solid;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all .15s;
+  }
+  .vf-btn.vrai { border-color: var(--green); color: var(--green); background: #eaf5e8; }
+  .vf-btn.vrai:hover { background: var(--green); color: #fff; }
+  .vf-btn.faux { border-color: var(--red); color: var(--red); background: #faeaea; }
+  .vf-btn.faux:hover { background: var(--red); color: #fff; }
+  .vf-feedback {
+    margin-top: 12px;
+    font-family: 'Crimson Pro', serif;
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--ink-light);
+    min-height: 22px;
+  }
+  .vf-correct-ans {
+    font-family: 'Noto Serif Hebrew', serif;
+    color: var(--green);
+    font-weight: 600;
+    direction: rtl;
+  }
+  .progress-bar-wrap {
+    background: var(--parchment-dkr);
+    border-radius: 4px;
+    height: 6px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold), var(--red));
+    transition: width .3s;
+    border-radius: 4px;
+  }
+
+  /* ── QCM ── */
+  .qcm-question {
+    font-family: 'Noto Serif Hebrew', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    direction: rtl;
+    color: var(--ink);
+    background: var(--parchment-dk);
+    border: 2px solid var(--parchment-dkr);
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 20px;
+  }
+  .qcm-opts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .qcm-opt {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    padding: 12px 18px;
+    border: 2px solid var(--parchment-dkr);
+    background: var(--parchment);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all .15s;
+    text-align: center;
+    color: var(--ink);
+  }
+  .qcm-opt:hover:not(:disabled) { border-color: var(--gold); background: var(--parchment-dk); }
+  .qcm-opt.correct { border-color: var(--green); background: #eaf5e8; color: var(--green); font-weight: 600; }
+  .qcm-opt.wrong   { border-color: var(--red); background: #faeaea; color: var(--red); }
+  .qcm-opt:disabled { cursor: default; }
+  .qcm-next {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1rem;
+    padding: 8px 28px;
+    background: var(--gold);
+    color: var(--ink);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-weight: 600;
+    transition: opacity .15s;
+  }
+  .qcm-next:hover { opacity: 0.85; }
+  .qcm-next:disabled { opacity: 0.4; cursor: default; }
+
+  /* ── ASSOCIATION ── */
+  .assoc-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 20px;
+  }
+  .assoc-col-title {
+    font-family: 'Crimson Pro', serif;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--ink-light);
+    margin-bottom: 10px;
+    text-align: center;
+    border-bottom: 1px solid var(--parchment-dkr);
+    padding-bottom: 6px;
+  }
+  .assoc-col { display: flex; flex-direction: column; gap: 8px; }
+  .assoc-item {
+    font-family: 'Noto Serif Hebrew', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    direction: rtl;
+    text-align: center;
+    padding: 10px 14px;
+    border: 2px solid var(--parchment-dkr);
+    background: var(--parchment-dk);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all .15s;
+    color: var(--ink);
+    user-select: none;
+  }
+  .assoc-item.trans {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 400;
+    direction: ltr;
+    color: var(--blue);
+  }
+  .assoc-item:hover:not(.matched):not(.wrong-flash) { border-color: var(--gold); background: #f5e8c0; }
+  .assoc-item.selected { border-color: var(--gold); background: #f5e8c0; box-shadow: 0 0 0 3px rgba(184,134,11,0.3); }
+  .assoc-item.matched { border-color: var(--green); background: #eaf5e8; color: var(--green); cursor: default; opacity: 0.7; }
+  .assoc-item.wrong-flash { border-color: var(--red); background: #faeaea; }
+  .assoc-feedback {
+    text-align: center;
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--ink-light);
+    min-height: 22px;
+    margin-bottom: 8px;
+  }
+
+  /* ── END MESSAGE ── */
+  .end-msg {
+    text-align: center;
+    padding: 30px;
+    background: var(--parchment-dk);
+    border: 2px solid var(--gold);
+    border-radius: 10px;
+    display: none;
+  }
+  .end-msg .big { font-family: 'Noto Serif Hebrew', serif; font-size: 2.5rem; color: var(--gold); margin-bottom: 8px; }
+  .end-msg p { font-family: 'Crimson Pro', serif; font-size: 1.2rem; font-style: italic; color: var(--ink-light); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .panel { padding: 18px 14px; }
+    .qcm-opts { grid-template-columns: 1fr; }
+    .assoc-wrap { grid-template-columns: 1fr; }
+    .vocab-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── DECORATIVE DIVIDER ── */
+  .divider {
+    text-align: center;
+    color: var(--gold);
+    font-size: 1.2rem;
+    letter-spacing: 0.5em;
+    margin: 24px 0 20px;
+    opacity: 0.6;
+  }
+
+  .footnote {
+    font-family: 'Crimson Pro', serif;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--ink-light);
+    opacity: 0.7;
+    text-align: center;
+    margin-top: 30px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-heb">עברית מן ההתחלה</div>
+  <div class="header-sub">Vocabulaire interactif — <em>Ivrit min ha-hathala</em></div>
+  <div class="header-badge">יחידות א׳–ז׳ &nbsp;·&nbsp; פסק זמן א׳–ב׳ &nbsp;·&nbsp; שיעורים 1–9</div>
+  <div style="font-family:'Crimson Pro',serif;font-size:0.82rem;color:var(--parchment-dk);opacity:0.7;margin-top:6px;font-style:italic;">
+    יחידות = unités du manuel · פסק זמן = pause · שיעורים = leçons du cahier d'exercices
+  </div>
+</header>
+
+<div style="max-width:980px;margin:0 auto;">
+  <div class="tab-bar">
+    <button class="tab-btn active" onclick="switchTab('lexique')">📖 Lexique</button>
+    <button class="tab-btn" onclick="switchTab('vraifaux')">✓✗ Vrai / Faux</button>
+    <button class="tab-btn" onclick="switchTab('qcm')">🔵 QCM</button>
+    <button class="tab-btn" onclick="switchTab('assoc')">🔗 Association</button>
+  </div>
+
+  <div class="panel">
+
+    <!-- ═══════════════════ LEXIQUE ═══════════════════ -->
+    <div id="tab-lexique" class="tab-content active">
+      <div class="section-title">אוצר המילים <span>— Vocabulaire יחידות א׳–ז׳ + פסק זמן א׳–ב׳ + שיעורים 1–9</span></div>
+
+      <!-- Filtres catégories -->
+      <div class="cat-row">
+        <span class="cat-label">Filtrer :</span>
+        <button class="cat-btn active" data-cat="all" onclick="filterCat(this,'all')">Tout</button>
+        <button class="cat-btn" data-cat="u1" onclick="filterCat(this,'u1')">יחידה א׳</button>
+        <button class="cat-btn" data-cat="u2" onclick="filterCat(this,'u2')">יחידה ב׳</button>
+        <button class="cat-btn" data-cat="u3" onclick="filterCat(this,'u3')">יחידה ג׳</button>
+        <button class="cat-btn" data-cat="u4" onclick="filterCat(this,'u4')">יחידה ד׳</button>
+        <button class="cat-btn" data-cat="u5" onclick="filterCat(this,'u5')">יחידה ה׳</button>
+        <button class="cat-btn" data-cat="u6" onclick="filterCat(this,'u6')">יחידה ו׳</button>
+        <button class="cat-btn" data-cat="u7" onclick="filterCat(this,'u7')">יחידה ז׳</button>
+        <button class="cat-btn" data-cat="pza" onclick="filterCat(this,'pza')">פסק זמן א׳</button>
+        <button class="cat-btn" data-cat="s1" onclick="filterCat(this,'s1')">שיעור 1</button>
+        <button class="cat-btn" data-cat="s2" onclick="filterCat(this,'s2')">שיעור 2</button>
+        <button class="cat-btn" data-cat="s3" onclick="filterCat(this,'s3')">שיעור 3</button>
+        <button class="cat-btn" data-cat="s4" onclick="filterCat(this,'s4')">שיעור 4</button>
+        <button class="cat-btn" data-cat="s5" onclick="filterCat(this,'s5')">שיעור 5</button>
+        <button class="cat-btn" data-cat="s6" onclick="filterCat(this,'s6')">שיעור 6</button>
+        <button class="cat-btn" data-cat="pzb" onclick="filterCat(this,'pzb')">פסק זמן ב׳</button>
+        <button class="cat-btn" data-cat="s7" onclick="filterCat(this,'s7')">שיעור 7</button>
+        <button class="cat-btn" data-cat="s8" onclick="filterCat(this,'s8')">שיעור 8</button>
+        <button class="cat-btn" data-cat="s9" onclick="filterCat(this,'s9')">שיעור 9</button>
+        <button class="cat-btn" data-cat="nom" onclick="filterCat(this,'nom')">שמות עצם</button>
+        <button class="cat-btn" data-cat="verbe" onclick="filterCat(this,'verbe')">פעלים</button>
+        <button class="cat-btn" data-cat="pronom" onclick="filterCat(this,'pronom')">שמות גוף</button>
+        <button class="cat-btn" data-cat="question" onclick="filterCat(this,'question')">שאלה</button>
+        <button class="cat-btn" data-cat="divers" onclick="filterCat(this,'divers')">שונות</button>
+        <button class="ctrl-btn" onclick="selectAll()">Tout sélectionner</button>
+        <button class="ctrl-btn" onclick="clearAll()">Tout effacer</button>
+      </div>
+
+      <div class="vocab-grid" id="vocab-grid"></div>
+      <p class="footnote">Source : <em>עברית מן ההתחלה</em> — יחידות א׳–ז׳ · פסק זמן א׳–ב׳ · שיעורים 1–9</p>
+    </div>
+
+    <!-- ═══════════════════ VRAI/FAUX ═══════════════════ -->
+    <div id="tab-vraifaux" class="tab-content">
+      <div class="section-title">תרגיל: נכון / לא נכון <span>— Vrai ou Faux ?</span></div>
+      <div class="ex-header">
+        <div class="score-box">Score : <strong id="vf-score">0</strong> / <span id="vf-total">0</span></div>
+        <button class="btn-restart" onclick="initVF()">↺ Recommencer</button>
+      </div>
+      <div class="cat-row" id="vf-cats">
+        <span class="cat-label">Catégories :</span>
+        <button class="cat-btn active" data-cat="all" onclick="toggleVFCat(this,'all')">Tout</button>
+        <button class="cat-btn" data-cat="u1" onclick="toggleVFCat(this,'u1')">יחידה א׳</button>
+        <button class="cat-btn" data-cat="u2" onclick="toggleVFCat(this,'u2')">יחידה ב׳</button>
+        <button class="cat-btn" data-cat="u3" onclick="toggleVFCat(this,'u3')">יחידה ג׳</button>
+        <button class="cat-btn" data-cat="u4" onclick="toggleVFCat(this,'u4')">יחידה ד׳</button>
+        <button class="cat-btn" data-cat="u5" onclick="toggleVFCat(this,'u5')">יחידה ה׳</button>
+        <button class="cat-btn" data-cat="u6" onclick="toggleVFCat(this,'u6')">יחידה ו׳</button>
+        <button class="cat-btn" data-cat="u7" onclick="toggleVFCat(this,'u7')">יחידה ז׳</button>
+        <button class="cat-btn" data-cat="pza" onclick="toggleVFCat(this,'pza')">פסק זמן א׳</button>
+        <button class="cat-btn" data-cat="s1" onclick="toggleVFCat(this,'s1')">שיעור 1</button>
+        <button class="cat-btn" data-cat="s2" onclick="toggleVFCat(this,'s2')">שיעור 2</button>
+        <button class="cat-btn" data-cat="s3" onclick="toggleVFCat(this,'s3')">שיעור 3</button>
+        <button class="cat-btn" data-cat="s4" onclick="toggleVFCat(this,'s4')">שיעור 4</button>
+        <button class="cat-btn" data-cat="s5" onclick="toggleVFCat(this,'s5')">שיעור 5</button>
+        <button class="cat-btn" data-cat="s6" onclick="toggleVFCat(this,'s6')">שיעור 6</button>
+        <button class="cat-btn" data-cat="pzb" onclick="toggleVFCat(this,'pzb')">פסק זמן ב׳</button>
+        <button class="cat-btn" data-cat="s7" onclick="toggleVFCat(this,'s7')">שיעור 7</button>
+        <button class="cat-btn" data-cat="s8" onclick="toggleVFCat(this,'s8')">שיעור 8</button>
+        <button class="cat-btn" data-cat="s9" onclick="toggleVFCat(this,'s9')">שיעור 9</button>
+        <button class="ctrl-btn" onclick="selectAllVF()">Tout sélectionner</button>
+        <button class="ctrl-btn" onclick="clearAllVF()">Tout effacer</button>
+      </div>
+      <div class="progress-bar-wrap"><div class="progress-bar" id="vf-progress"></div></div>
+      <div id="vf-card-zone"></div>
+      <div class="end-msg" id="vf-end">
+        <div class="big">!כל הכבוד</div>
+        <p id="vf-end-msg"></p>
+      </div>
+    </div>
+
+    <!-- ═══════════════════ QCM ═══════════════════ -->
+    <div id="tab-qcm" class="tab-content">
+      <div class="section-title">שאלות בחירה <span>— Choix multiple</span></div>
+      <div class="ex-header">
+        <div class="score-box">Score : <strong id="qcm-score">0</strong> / <span id="qcm-total">0</span></div>
+        <button class="btn-restart" onclick="initQCM()">↺ Recommencer</button>
+      </div>
+      <div class="cat-row" id="qcm-cats">
+        <span class="cat-label">Catégories :</span>
+        <button class="cat-btn active" data-cat="all" onclick="toggleQCMCat(this,'all')">Tout</button>
+        <button class="cat-btn" data-cat="u1" onclick="toggleQCMCat(this,'u1')">יחידה א׳</button>
+        <button class="cat-btn" data-cat="u2" onclick="toggleQCMCat(this,'u2')">יחידה ב׳</button>
+        <button class="cat-btn" data-cat="u3" onclick="toggleQCMCat(this,'u3')">יחידה ג׳</button>
+        <button class="cat-btn" data-cat="u4" onclick="toggleQCMCat(this,'u4')">יחידה ד׳</button>
+        <button class="cat-btn" data-cat="u5" onclick="toggleQCMCat(this,'u5')">יחידה ה׳</button>
+        <button class="cat-btn" data-cat="u6" onclick="toggleQCMCat(this,'u6')">יחידה ו׳</button>
+        <button class="cat-btn" data-cat="u7" onclick="toggleQCMCat(this,'u7')">יחידה ז׳</button>
+        <button class="cat-btn" data-cat="pza" onclick="toggleQCMCat(this,'pza')">פסק זמן א׳</button>
+        <button class="cat-btn" data-cat="s1" onclick="toggleQCMCat(this,'s1')">שיעור 1</button>
+        <button class="cat-btn" data-cat="s2" onclick="toggleQCMCat(this,'s2')">שיעור 2</button>
+        <button class="cat-btn" data-cat="s3" onclick="toggleQCMCat(this,'s3')">שיעור 3</button>
+        <button class="cat-btn" data-cat="s4" onclick="toggleQCMCat(this,'s4')">שיעור 4</button>
+        <button class="cat-btn" data-cat="s5" onclick="toggleQCMCat(this,'s5')">שיעור 5</button>
+        <button class="cat-btn" data-cat="s6" onclick="toggleQCMCat(this,'s6')">שיעור 6</button>
+        <button class="cat-btn" data-cat="pzb" onclick="toggleQCMCat(this,'pzb')">פסק זמן ב׳</button>
+        <button class="cat-btn" data-cat="s7" onclick="toggleQCMCat(this,'s7')">שיעור 7</button>
+        <button class="cat-btn" data-cat="s8" onclick="toggleQCMCat(this,'s8')">שיעור 8</button>
+        <button class="cat-btn" data-cat="s9" onclick="toggleQCMCat(this,'s9')">שיעור 9</button>
+        <button class="ctrl-btn" onclick="selectAllQCM()">Tout sélectionner</button>
+        <button class="ctrl-btn" onclick="clearAllQCM()">Tout effacer</button>
+      </div>
+      <div class="progress-bar-wrap"><div class="progress-bar" id="qcm-progress"></div></div>
+      <div id="qcm-zone"></div>
+      <div class="end-msg" id="qcm-end">
+        <div class="big">!מעולה</div>
+        <p id="qcm-end-msg"></p>
+      </div>
+    </div>
+
+    <!-- ═══════════════════ ASSOCIATION ═══════════════════ -->
+    <div id="tab-assoc" class="tab-content">
+      <div class="section-title">התאמה <span>— Associer hébreu ↔ translittération</span></div>
+      <div class="ex-header">
+        <div class="score-box">Paires : <strong id="assoc-score">0</strong> / <span id="assoc-total">0</span></div>
+        <button class="btn-restart" onclick="initAssoc()">↺ Nouvelle série</button>
+      </div>
+      <div class="cat-row" id="assoc-cats">
+        <span class="cat-label">Catégories :</span>
+        <button class="cat-btn active" data-cat="all" onclick="toggleAssocCat(this,'all')">Tout</button>
+        <button class="cat-btn" data-cat="u1" onclick="toggleAssocCat(this,'u1')">יחידה א׳</button>
+        <button class="cat-btn" data-cat="u2" onclick="toggleAssocCat(this,'u2')">יחידה ב׳</button>
+        <button class="cat-btn" data-cat="u3" onclick="toggleAssocCat(this,'u3')">יחידה ג׳</button>
+        <button class="cat-btn" data-cat="u4" onclick="toggleAssocCat(this,'u4')">יחידה ד׳</button>
+        <button class="cat-btn" data-cat="u5" onclick="toggleAssocCat(this,'u5')">יחידה ה׳</button>
+        <button class="cat-btn" data-cat="u6" onclick="toggleAssocCat(this,'u6')">יחידה ו׳</button>
+        <button class="cat-btn" data-cat="u7" onclick="toggleAssocCat(this,'u7')">יחידה ז׳</button>
+        <button class="cat-btn" data-cat="pza" onclick="toggleAssocCat(this,'pza')">פסק זמן א׳</button>
+        <button class="cat-btn" data-cat="s1" onclick="toggleAssocCat(this,'s1')">שיעור 1</button>
+        <button class="cat-btn" data-cat="s2" onclick="toggleAssocCat(this,'s2')">שיעור 2</button>
+        <button class="cat-btn" data-cat="s3" onclick="toggleAssocCat(this,'s3')">שיעור 3</button>
+        <button class="cat-btn" data-cat="s4" onclick="toggleAssocCat(this,'s4')">שיעור 4</button>
+        <button class="cat-btn" data-cat="s5" onclick="toggleAssocCat(this,'s5')">שיעור 5</button>
+        <button class="cat-btn" data-cat="s6" onclick="toggleAssocCat(this,'s6')">שיעור 6</button>
+        <button class="cat-btn" data-cat="pzb" onclick="toggleAssocCat(this,'pzb')">פסק זמן ב׳</button>
+        <button class="cat-btn" data-cat="s7" onclick="toggleAssocCat(this,'s7')">שיעור 7</button>
+        <button class="cat-btn" data-cat="s8" onclick="toggleAssocCat(this,'s8')">שיעור 8</button>
+        <button class="cat-btn" data-cat="s9" onclick="toggleAssocCat(this,'s9')">שיעור 9</button>
+        <button class="ctrl-btn" onclick="selectAllAssoc()">Tout sélectionner</button>
+        <button class="ctrl-btn" onclick="clearAllAssoc()">Tout effacer</button>
+      </div>
+      <div class="assoc-feedback" id="assoc-feedback"></div>
+      <div class="assoc-wrap" id="assoc-zone"></div>
+      <div class="end-msg" id="assoc-end">
+        <div class="big">!יפה מאוד</div>
+        <p>Toutes les paires trouvées !</p>
+      </div>
+    </div>
+
+  </div><!-- .panel -->
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════
+// DONNÉES — Vocabulaire complet
+// יחידות א׳–ז׳ · פסק זמן א׳ · שיעורים 1–2
+// ═══════════════════════════════════════════════════════
+const VOCAB = [
+  // ── יחידה א׳ ── Pronoms personnels
+  { heb:'אֲנִי',    trans:'ani',    fr:'je / moi',         cat:['u1','pronom'] },
+  { heb:'אַתָּה',   trans:'ata',    fr:'tu (m.)',           cat:['u1','pronom'] },
+  { heb:'אַתְּ',    trans:"at",     fr:'tu (f.)',           cat:['u1','pronom'] },
+  { heb:'הוּא',     trans:'hu',     fr:'il',                cat:['u1','pronom'] },
+  { heb:'הִיא',     trans:'hi',     fr:'elle',              cat:['u1','pronom'] },
+  // ── יחידה א׳ ── Noms / mots
+  { heb:'אִמָּא',   trans:"'ima",   fr:'maman',             cat:['u1','nom'] },
+  { heb:'יַיִן',    trans:'yayin',  fr:'vin',               cat:['u1','nom'] },
+  { heb:'יָם',      trans:'yam',    fr:'mer',               cat:['u1','nom'] },
+  { heb:'מַיִם',    trans:'mayim',  fr:'eau',               cat:['u1','nom'] },
+  { heb:'מַתָּנָה', trans:'matana', fr:'cadeau',            cat:['u1','nom'] },
+  // ── יחידה א׳ ── Questions
+  { heb:'מָה?',     trans:'ma?',    fr:'quoi? / qu\'est-ce que?', cat:['u1','question'] },
+  { heb:'מִי?',     trans:'mi?',    fr:'qui?',              cat:['u1','question'] },
+  // ── יחידה א׳ ── Divers
+  { heb:'הֵי!',     trans:'hey!',   fr:'salut! (m.)',       cat:['u1','divers'] },
+  { heb:'הַיְיָ!',  trans:'hayya!', fr:'allez!',            cat:['u1','divers'] },
+  // ── יחידה ב׳ ── Noms
+  { heb:'אִישׁ',    trans:"'ish",   fr:'homme',             cat:['u2','nom'] },
+  { heb:'אִשָּׁה',  trans:"'isha",  fr:'femme / épouse',   cat:['u2','nom'] },
+  { heb:'יֶלֶד',    trans:'yeled',  fr:'garçon / enfant',  cat:['u2','nom'] },
+  { heb:'יַלְדָּה', trans:'yalda',  fr:'fille / enfant',   cat:['u2','nom'] },
+  { heb:'תַּלְמִיד',trans:'talmid', fr:'élève (m.)',        cat:['u2','nom'] },
+  { heb:'תַּלְמִידָה',trans:'talmida',fr:'élève (f.)',      cat:['u2','nom'] },
+  { heb:'גְּלִידָה',trans:'glida',  fr:'glace (crème)',    cat:['u2','nom'] },
+  { heb:'דֶּגֶל',   trans:'degel',  fr:'drapeau',          cat:['u2','nom'] },
+  { heb:'הַר',      trans:'har',    fr:'montagne',         cat:['u2','nom'] },
+  { heb:'שֶׁמֶשׁ',  trans:'shemesh',fr:'soleil',           cat:['u2','nom'] },
+  { heb:'שִׁיר',    trans:'shir',   fr:'chanson / poème',  cat:['u2','nom'] },
+  { heb:'מַרְגָּרִינָה',trans:'margarina',fr:'margarine',  cat:['u2','nom'] },
+  { heb:'תֵּה',     trans:'te',     fr:'thé',              cat:['u2','nom'] },
+  // ── יחידה ב׳ ── Prépositions / particules
+  { heb:'שֶׁל',     trans:'shel',   fr:'de / appartenant à',cat:['u2','divers'] },
+  { heb:'מֵאַיִן?', trans:"me'ayin?",fr:'d\'où?',          cat:['u2','question'] },
+  { heb:'גַּם',     trans:'gam',    fr:'aussi',            cat:['u2','divers'] },
+  { heb:'הִנֵּה',   trans:'hine',   fr:'voilà / il y a',   cat:['u2','divers'] },
+  { heb:'שָׁם',     trans:'sham',   fr:'là-bas',           cat:['u2','divers'] },
+  // ── יחידה ב׳ ── Pays
+  { heb:'יִשְׂרָאֵל',trans:'yisra\'el',fr:'Israël',        cat:['u2','nom'] },
+  { heb:'אַנְגְלִיָּה',trans:'anglia',fr:'Angleterre',     cat:['u2','nom'] },
+  { heb:'גֶּרְמַנִיָּה',trans:'germania',fr:'Allemagne',   cat:['u2','nom'] },
+  { heb:'דַּנְיָה', trans:'dania',  fr:'Danemark',         cat:['u2','nom'] },
+  { heb:'יַרְדֵּן', trans:'yarden', fr:'Jordanie',         cat:['u2','nom'] },
+  { heb:'אִירְלַנְד',trans:"'irland",fr:'Irlande',         cat:['u2','nom'] },
+  { heb:'תֵּימַן',  trans:'teman',  fr:'Yémen',            cat:['u2','nom'] },
+  // ── יחידה ב׳ ── météo
+  { heb:'גֶּשֶׁם',  trans:'geshem', fr:'pluie',            cat:['u2','nom'] },
+  { heb:'שֶׁלֶג',   trans:'sheleg', fr:'neige',            cat:['u2','nom'] },
+
+  // ══════════════════════════════════
+  // ── יחידה ג׳ ── Pronoms pluriels
+  { heb:'אַתֶּם',   trans:'atem',   fr:'vous (m.pl.)',      cat:['u3','pronom'] },
+  { heb:'אַתֶּן',   trans:'aten',   fr:'vous (f.pl.)',      cat:['u3','pronom'] },
+  { heb:'הֵם',      trans:'hem',    fr:'ils',               cat:['u3','pronom'] },
+  { heb:'הֵן',      trans:'hen',    fr:'elles',             cat:['u3','pronom'] },
+  // ── יחידה ג׳ ── Pronoms démonstratifs
+  { heb:'זֶה',      trans:'ze',     fr:'c\'est / ceci (m.)',cat:['u3','pronom'] },
+  { heb:'זֹאת',     trans:'zot',    fr:'c\'est / ceci (f.)',cat:['u3','pronom'] },
+  { heb:'אֵלֶּה',   trans:"'ele",   fr:'ce sont / ceux-ci', cat:['u3','pronom'] },
+  // ── יחידה ג׳ ── Noms
+  { heb:'לֶחֶם',    trans:'lehem',  fr:'pain',             cat:['u3','nom'] },
+  { heb:'חַלָּה',   trans:'hala',   fr:'pain de Shabbat',  cat:['u3','nom'] },
+  { heb:'לִימוֹן',  trans:'limon',  fr:'citron',           cat:['u3','nom'] },
+  { heb:'מְלָח',    trans:'melah',  fr:'sel',              cat:['u3','nom'] },
+  { heb:'מַיוֹנֶז', trans:'mayonez',fr:'mayonnaise',       cat:['u3','nom'] },
+  { heb:'מֶנְטָה',  trans:'menta',  fr:'menthe',           cat:['u3','nom'] },
+  { heb:'מוֹרֶה',   trans:'more',   fr:'professeur (m.)',  cat:['u3','nom'] },
+  { heb:'מוֹרָה',   trans:'mora',   fr:'professeure (f.)', cat:['u3','nom'] },
+  { heb:'טֶלֶוִיזְיָה',trans:'televizia',fr:'télévision', cat:['u3','nom'] },
+  { heb:'וִידֵאוֹ', trans:"vide'o", fr:'vidéo',            cat:['u3','nom'] },
+  { heb:'רַדְיוֹ',  trans:'radio',  fr:'radio',            cat:['u3','nom'] },
+  { heb:'זוֹאוֹלוֹגְיָה',trans:"zo'ologia",fr:'zoologie', cat:['u3','nom'] },
+  { heb:'יִדִישׁ',  trans:'yidish', fr:'yiddish',          cat:['u3','nom'] },
+  { heb:'רוֹמָנִית',trans:'romanit',fr:'roumain (langue)', cat:['u3','nom'] },
+  { heb:'גֶּרְמָנִית',trans:'germanit',fr:'allemand (langue)',cat:['u3','nom'] },
+  { heb:'אַנְגְלִית',trans:"'anglit",fr:'anglais (langue)', cat:['u3','nom'] },
+  // ── יחידה ג׳ ── Verbes
+  { heb:'גָּר',     trans:'gar',    fr:'habite / vit (m.)',cat:['u3','verbe'] },
+  { heb:'גָּרָה',   trans:'gara',   fr:'habite / vit (f.)',cat:['u3','verbe'] },
+  { heb:'לוֹמֵד',   trans:'lomed',  fr:'apprend / étudie (m.)',cat:['u3','verbe'] },
+  { heb:'לוֹמֶדֶת', trans:'lomedet',fr:'apprend / étudie (f.)',cat:['u3','verbe'] },
+  { heb:'שָׁר',     trans:'shar',   fr:'chante (m.)',      cat:['u3','verbe'] },
+  { heb:'שָׁרָה',   trans:'shara',  fr:'chante (f.)',      cat:['u3','verbe'] },
+  // ── יחידה ג׳ ── Particules / divers
+  { heb:'לֹא',      trans:'lo',     fr:'non / ne pas',     cat:['u3','divers'] },
+  { heb:'אוֹ',      trans:"'o",     fr:'ou',               cat:['u3','divers'] },
+  { heb:'וְ...',    trans:'ve...',  fr:'et...',            cat:['u3','divers'] },
+  { heb:'שָׁלוֹם',  trans:'shalom', fr:'bonjour / paix',   cat:['u3','divers'] },
+  { heb:'תּוֹדָה',  trans:'toda',   fr:'merci',            cat:['u3','divers'] },
+  { heb:'לְהִתְרָאוֹת',trans:'lehitra\'ot',fr:'au revoir', cat:['u3','divers'] },
+  { heb:'יָם הַמֶּלַח',trans:'yam hammelah',fr:'la mer Morte',cat:['u3','nom'] },
+  { heb:'הַגּוֹלָן', trans:'hagolan',fr:'le Golan',         cat:['u3','nom'] },
+
+  // ══════════════════════════════════
+  // ── יחידה ד׳ ── Pronoms / nous
+  { heb:'אֲנַחְנוּ', trans:"'anahnu",fr:'nous',            cat:['u4','pronom'] },
+  { heb:'הוּא',      trans:'hu',     fr:'il',              cat:['u4','pronom'] },
+  // ── יחידה ד׳ ── Noms
+  { heb:'אֶרֶץ',    trans:"'erets",  fr:'pays / terre',    cat:['u4','nom'] },
+  { heb:'עִיר',     trans:"'ir",     fr:'ville',           cat:['u4','nom'] },
+  { heb:'סֶרֶט',    trans:'seret',   fr:'film',            cat:['u4','nom'] },
+  { heb:'עוּגָה',   trans:"'uga",    fr:'gâteau',          cat:['u4','nom'] },
+  { heb:'סָלָט',    trans:'salat',   fr:'salade',          cat:['u4','nom'] },
+  { heb:'מִיץ',     trans:'mits',    fr:'jus',             cat:['u4','nom'] },
+  { heb:'שׁוֹקוֹלָד',trans:'shokolad',fr:'chocolat',       cat:['u4','nom'] },
+  { heb:'קוֹקָה קוֹלָה',trans:'qoqa qola',fr:'Coca-Cola', cat:['u4','nom'] },
+  { heb:'מִסְעָדָה',trans:"mis'ada", fr:'restaurant',      cat:['u4','nom'] },
+  { heb:'קָצָת',    trans:'qtsat',   fr:'un peu',          cat:['u4','divers'] },
+  { heb:'רֶגַע',    trans:'rega',    fr:'un moment / instant',cat:['u4','divers'] },
+  { heb:'סְלִיחָה', trans:'sliha',   fr:'excusez-moi / pardon',cat:['u4','divers'] },
+  { heb:'מַתֶּמָטִיקָה',trans:'matematika',fr:'mathématiques',cat:['u4','nom'] },
+  { heb:'אֶלֶקְטְרוֹנִיקָה',trans:"'elektronika",fr:'électronique',cat:['u4','nom'] },
+  { heb:'קוֹנְצֶרְט',trans:'qontsert',fr:'concert',         cat:['u4','nom'] },
+  { heb:'סְטוּדֶנְט',trans:'student', fr:'étudiant (m.)',   cat:['u4','nom'] },
+  { heb:'סְטוּדֶנְטִית',trans:'studentit',fr:'étudiante (f.)',cat:['u4','nom'] },
+  { heb:'רוּסִית', trans:'rusit',    fr:'russe (langue)',   cat:['u4','nom'] },
+  // ── יחידה ד׳ ── Verbes
+  { heb:'רוֹצֶה',   trans:'rotse',   fr:'veut / désire (m.)',cat:['u4','verbe'] },
+  { heb:'רוֹצָה',   trans:'rotsa',   fr:'veut / désire (f.)',cat:['u4','verbe'] },
+  { heb:'שׁוֹתֶה',  trans:'shote',   fr:'boit (m.)',        cat:['u4','verbe'] },
+  { heb:'שׁוֹתָה',  trans:'shota',   fr:'boit (f.)',        cat:['u4','verbe'] },
+  { heb:'עוֹשֶׂה',  trans:"'ose",    fr:'fait / fabrique (m.)',cat:['u4','verbe'] },
+  { heb:'עוֹשָׂה',  trans:"'osa",    fr:'fait / fabrique (f.)',cat:['u4','verbe'] },
+  { heb:'לוֹמְדִים',trans:'lomdim',  fr:'étudient (m.pl.)', cat:['u4','verbe'] },
+  { heb:'לוֹמְדוֹת',trans:'lomdot',  fr:'étudient (f.pl.)', cat:['u4','verbe'] },
+  { heb:'גָּרִים',  trans:'garim',   fr:'habitent (m.pl.)', cat:['u4','verbe'] },
+  { heb:'גָּרוֹת',  trans:'garot',   fr:'habitent (f.pl.)', cat:['u4','verbe'] },
+  // ── יחידה ד׳ ── Particules / divers
+  { heb:'עִם',      trans:"'im",     fr:'avec',             cat:['u4','divers'] },
+  { heb:'לְ...',    trans:'le...',   fr:'à / vers...',      cat:['u4','divers'] },
+  { heb:'לְאָן?',   trans:"le'an?",  fr:'où ? (direction)', cat:['u4','question'] },
+  { heb:'אוּלַי',   trans:"'ulay",   fr:'peut-être',        cat:['u4','divers'] },
+  { heb:'רַק',      trans:'raq',     fr:'seulement / juste',cat:['u4','divers'] },
+  { heb:'נָעִים מְאוֹד',trans:"na'im me'od",fr:'enchanté(e) / très agréable',cat:['u4','divers'] },
+  { heb:'מַה נִּשְׁמָע?',trans:"ma nishma?",fr:'quoi de neuf?',cat:['u4','question'] },
+  { heb:'מְצֻיָּן',trans:'metsuyan', fr:'excellent / parfait',cat:['u4','divers'] },
+  { heb:'יְרוּשָׁלַיִם',trans:'yerushalayim',fr:'Jérusalem',cat:['u4','nom'] },
+  { heb:'מִצְרַיִם',trans:'mitsrayim',fr:'Égypte',          cat:['u4','nom'] },
+  { heb:'מֶקְסִיקוֹ',trans:'meksiko',fr:'Mexique',          cat:['u4','nom'] },
+  { heb:'סִין',     trans:'sin',     fr:'Chine',            cat:['u4','nom'] },
+
+  // ══════════════════════════════════
+  // ── יחידה ה׳ ── Noms
+  { heb:'אַבָּא',   trans:"'aba",    fr:'papa',             cat:['u5','nom'] },
+  { heb:'בַּיִת',   trans:'bayit',   fr:'maison',           cat:['u5','nom'] },
+  { heb:'כִּיתָה',  trans:'kita',    fr:'classe / salle de classe', cat:['u5','nom'] },
+  { heb:'אוּלְפָּן',trans:"'ulpan",  fr:'ulpan (cours d\'hébreu)', cat:['u5','nom'] },
+  { heb:'מִשְׁפָּחָה',trans:"mishpaha",fr:'famille',        cat:['u5','nom'] },
+  { heb:'עוֹלָם',   trans:"'olam",   fr:'monde',            cat:['u5','nom'] },
+  { heb:'סוּפֶּרְמַרְקֶט',trans:'supermarqet',fr:'supermarché', cat:['u5','nom'] },
+  { heb:'מוּזֵיאוֹן',trans:"muze'on",fr:'musée',            cat:['u5','nom'] },
+  { heb:'תֵּאַטְרוֹן',trans:"te'atron",fr:'théâtre',         cat:['u5','nom'] },
+  { heb:'סוּכָּר',  trans:'sukar',   fr:'sucre',            cat:['u5','nom'] },
+  { heb:'תַּפּוּז',  trans:'tapuz',   fr:'orange',           cat:['u5','nom'] },
+  { heb:'בָּנָנָה',  trans:'banana',  fr:'banane',           cat:['u5','nom'] },
+  { heb:'אֶשְׁכּוֹלִית',trans:"'eshkolit",fr:'pamplemousse', cat:['u5','nom'] },
+  { heb:'זַיִת',    trans:'zayit',   fr:'olive',            cat:['u5','nom'] },
+  { heb:'תָּמָר',   trans:'tamar',   fr:'datte',            cat:['u5','nom'] },
+  { heb:'פּוֹלָנִית',trans:'polanit', fr:'polonais (langue)',cat:['u5','nom'] },
+  { heb:'פּוֹרְטוּגֶזִית',trans:'portugezit',fr:'portugais (langue)',cat:['u5','nom'] },
+  { heb:'פּוֹלִיטִיקָה',trans:"politiqa",fr:'politique',     cat:['u5','nom'] },
+  // ── יחידה ה׳ ── Verbe
+  { heb:'מְדַבֵּר',  trans:'medaber', fr:'parle (m.)',       cat:['u5','verbe'] },
+  { heb:'מְדַבֶּרֶת',trans:'medaberet',fr:'parle (f.)',      cat:['u5','verbe'] },
+  { heb:'מְדַבְּרִים',trans:'medabrim',fr:'parlent (m.pl.)', cat:['u5','verbe'] },
+  { heb:'מְדַבְּרוֹת',trans:'medabrot',fr:'parlent (f.pl.)', cat:['u5','verbe'] },
+  // ── יחידה ה׳ ── Particules / divers
+  { heb:'יֵשׁ',     trans:'yesh',    fr:'il y a / il existe',cat:['u5','divers'] },
+  { heb:'אֵין',     trans:"'ein",    fr:'il n\'y a pas',    cat:['u5','divers'] },
+  { heb:'כֵּן',     trans:'ken',     fr:'oui',              cat:['u5','divers'] },
+  { heb:'פֹּה',     trans:'po',      fr:'ici',              cat:['u5','divers'] },
+  { heb:'עַל',      trans:"'al",     fr:'sur / à propos de',cat:['u5','divers'] },
+  { heb:'בְּ...',   trans:'be...',   fr:'dans / en / à...',  cat:['u5','divers'] },
+  { heb:'לְיַד',    trans:'leyad',   fr:'près de / à côté de',cat:['u5','divers'] },
+  { heb:'בְּסֵדֶר', trans:'beseder', fr:'d\'accord / ça va',cat:['u5','divers'] },
+  { heb:'הַרְבֵּה',  trans:'harbe',   fr:'beaucoup',         cat:['u5','divers'] },
+  { heb:'כָּל הָעוֹלָם',trans:"kol ha'olam",fr:'le monde entier',cat:['u5','divers'] },
+
+  // ══════════════════════════════════
+  // ── יחידה ו׳ ── Noms
+  { heb:'אֲבוֹקָדוֹ',trans:"'avoqado",fr:'avocat (fruit)',   cat:['u6','nom'] },
+  { heb:'חָלָב',    trans:'halav',   fr:'lait',             cat:['u6','nom'] },
+  { heb:'פָּלָאפֶל', trans:"fala'fel",fr:'fallafel',         cat:['u6','nom'] },
+  { heb:'קָפֶה',    trans:'qafe',    fr:'café',             cat:['u6','nom'] },
+  { heb:'סֵפֶר',    trans:'sefer',   fr:'livre',            cat:['u6','nom'] },
+  { heb:'מַחְשֵׁב',  trans:'mahshev', fr:'ordinateur',       cat:['u6','nom'] },
+  { heb:'מִכְתָּב',  trans:'miktav',  fr:'lettre (courrier)',cat:['u6','nom'] },
+  { heb:'מָלוֹן',   trans:'malon',   fr:'hôtel',            cat:['u6','nom'] },
+  { heb:'מוּזִיקָה', trans:'muziga',  fr:'musique',          cat:['u6','nom'] },
+  { heb:'שִׁיעוּר',  trans:"shi'ur",  fr:'leçon / cours',    cat:['u6','nom'] },
+  { heb:'אוּנִיבֶרְסִיטָה',trans:"'universita",fr:'université',cat:['u6','nom'] },
+  { heb:'אִינְטֶרְנֶט',trans:"'internet",fr:'internet',      cat:['u6','nom'] },
+  { heb:'בַּנְק',   trans:'banq',    fr:'banque',           cat:['u6','nom'] },
+  { heb:'(הַ)כְּנֶסֶת',trans:"(ha)kneset",fr:'la Knesset (parlement)',cat:['u6','nom'] },
+  { heb:'עִבְרִית', trans:"'ivrit",  fr:'hébreu (langue)',  cat:['u6','nom'] },
+  { heb:'עֲרָבִית', trans:"'aravit", fr:'arabe (langue)',   cat:['u6','nom'] },
+  { heb:'צָרְפָתִית',trans:'tsarfatit',fr:'français (langue)',cat:['u6','nom'] },
+  { heb:'סְפָרָדִית',trans:'sfaradit',fr:'espagnol (langue)',cat:['u6','nom'] },
+  // ── יחידה ו׳ ── Verbes
+  { heb:'אוֹהֵב',   trans:"'ohev",   fr:'aime (m.)',        cat:['u6','verbe'] },
+  { heb:'אוֹהֶבֶת', trans:"'ohevet", fr:'aime (f.)',        cat:['u6','verbe'] },
+  { heb:'הוֹלֵךְ',  trans:'holek',   fr:'va / marche (m.)', cat:['u6','verbe'] },
+  { heb:'קוֹרֵא',   trans:'qore',    fr:'lit / appelle (m.)',cat:['u6','verbe'] },
+  { heb:'כּוֹתֵב',  trans:'kotev',   fr:'écrit (m.)',       cat:['u6','verbe'] },
+  // ── יחידה ו׳ ── Expressions / divers
+  { heb:'בּוֹקֶר טוֹב',trans:'boqer tov',fr:'bonjour (matin)',cat:['u6','divers'] },
+  { heb:'עֶרֶב טוֹב',trans:"'erev tov",fr:'bonsoir',        cat:['u6','divers'] },
+  { heb:'טוֹב',     trans:'tov',     fr:'bien / bon',       cat:['u6','divers'] },
+  { heb:'יוֹפִי',   trans:'yofi',    fr:'super / magnifique',cat:['u6','divers'] },
+  { heb:'מַזָּל טוֹב',trans:"mazal tov",fr:'félicitations / bonne chance',cat:['u6','divers'] },
+  { heb:'בְּבַקָּשָׁה',trans:'bevaqasha',fr:'s\'il vous plaît',cat:['u6','divers'] },
+  { heb:'בָּרוּךְ הַשֵּׁם',trans:"baruk hashem",fr:'Dieu merci / béni soit Dieu',cat:['u6','divers'] },
+  { heb:'אֵיפֹה?',  trans:"'eifo?",  fr:'où ?',             cat:['u6','question'] },
+  { heb:'עַכְשָׁיו', trans:"'akshav", fr:'maintenant',       cat:['u6','divers'] },
+  { heb:'אֲבָל',    trans:"'aval",   fr:'mais',             cat:['u6','divers'] },
+  { heb:'דְּרִישַׁת שָׁלוֹם',trans:"drishat shalom",fr:'mes amitiés / salutations',cat:['u6','divers'] },
+
+  // ══════════════════════════════════
+  // ── יחידה ז׳ ── Nombres (féminin)
+  { heb:'אַחַת',     trans:"'ahat",    fr:'un / une (f.)',      cat:['u7','divers'] },
+  { heb:'שְׁתַּיִם',  trans:'shtayim',  fr:'deux (f.)',          cat:['u7','divers'] },
+  { heb:'שָׁלוֹשׁ',  trans:'shalosh',  fr:'trois',              cat:['u7','divers'] },
+  { heb:'אַרְבַּע',  trans:"'arba",    fr:'quatre',             cat:['u7','divers'] },
+  { heb:'חָמֵשׁ',    trans:'hamesh',   fr:'cinq',               cat:['u7','divers'] },
+  { heb:'שֵׁשׁ',     trans:'shesh',    fr:'six',                cat:['u7','divers'] },
+  { heb:'שֶׁבַע',    trans:"sheva",    fr:'sept',               cat:['u7','divers'] },
+  { heb:'שְׁמוֹנֶה', trans:'shmone',   fr:'huit',               cat:['u7','divers'] },
+  { heb:'תֵּשַׁע',   trans:'tesha',    fr:'neuf',               cat:['u7','divers'] },
+  { heb:'עֶשֶׂר',    trans:"'eser",    fr:'dix',                cat:['u7','divers'] },
+  { heb:'אַחַת עֶשְׂרֵה',trans:"'ahat 'esre",fr:'onze',         cat:['u7','divers'] },
+  { heb:'שְׁתֵּים עֶשְׂרֵה',trans:"shteim 'esre",fr:'douze',    cat:['u7','divers'] },
+  // ── יחידה ז׳ ── Noms
+  { heb:'שָׁעָה',    trans:"sha'a",    fr:'heure',              cat:['u7','nom'] },
+  { heb:'שָׁעוֹן',   trans:"sha'on",   fr:'montre / horloge',  cat:['u7','nom'] },
+  { heb:'חֵצִי',     trans:'hetsi',    fr:'demi / moitié',      cat:['u7','nom'] },
+  { heb:'רֶבַע',     trans:'reva',     fr:'quart',              cat:['u7','nom'] },
+  { heb:'חֲדָשׁוֹת', trans:'hadashot', fr:'informations / nouvelles', cat:['u7','nom'] },
+  { heb:'שֶׁקֶט',    trans:'sheqet',   fr:'silence / calme',   cat:['u7','nom'] },
+  { heb:'צֶ׳לוֹ',    trans:'tselo',    fr:'violoncelle',        cat:['u7','nom'] },
+  { heb:'צִ׳מְבָּלוֹ',trans:'tsimbalo',fr:'clavecin',           cat:['u7','nom'] },
+  { heb:'קוֹנְצֶרְטוֹ',trans:"qontserto",fr:'concerto',         cat:['u7','nom'] },
+  { heb:'סוֹנָטָה',  trans:'sonata',   fr:'sonate',             cat:['u7','nom'] },
+  { heb:'סִינִית',   trans:'sinit',    fr:'chinois (langue)',   cat:['u7','nom'] },
+  { heb:'צֶ׳כִית',   trans:'tshekit',  fr:'tchèque (langue)',   cat:['u7','nom'] },
+  { heb:'סֶנְדְוִיצ׳',trans:"sendvits", fr:'sandwich',          cat:['u7','nom'] },
+  { heb:'צִ׳יפְּס',  trans:"tsips",    fr:'chips / frites',     cat:['u7','nom'] },
+  { heb:'קֶ׳טְשׁוּפ׳',trans:"qetshup",  fr:'ketchup',            cat:['u7','nom'] },
+  // ── יחידה ז׳ ── Verbes
+  { heb:'יוֹדֵעַ',   trans:"yode'a",   fr:'sait / connaît (m.)',cat:['u7','verbe'] },
+  { heb:'יוֹדַעַת',  trans:"yoda'at",  fr:'sait / connaît (f.)',cat:['u7','verbe'] },
+  { heb:'יוֹדְעִים', trans:"yod'im",   fr:'savent (m.pl.)',     cat:['u7','verbe'] },
+  { heb:'יוֹדְעוֹת', trans:"yod'ot",   fr:'savent (f.pl.)',     cat:['u7','verbe'] },
+  // ── יחידה ז׳ ── Divers / expressions
+  { heb:'אָז',       trans:"'az",      fr:'alors / donc',       cat:['u7','divers'] },
+  { heb:'אֵיזֶה מַזָּל!',trans:"'eze mazal!",fr:'quelle chance!',cat:['u7','divers'] },
+  { heb:'מָה הַשָּׁעָה?',trans:"ma hasha'a?",fr:'quelle heure est-il ?',cat:['u7','question'] },
+  { heb:'רֶגַע',     trans:'rega',     fr:'un instant / attends',cat:['u7','divers'] },
+
+  // ══════════════════════════════════
+  // ── פסק זמן א׳ ── Noms
+  { heb:'חָבֵר',     trans:"haver",    fr:'ami / copain (m.)',   cat:['pza','nom'] },
+  { heb:'חֲבֵרָה',   trans:"havera",   fr:'amie / copine (f.)',  cat:['pza','nom'] },
+  { heb:'מִשְׁנָה',  trans:'mishna',   fr:'Mishna',              cat:['pza','nom'] },
+  { heb:'קִיבּוּץ',  trans:'kibuts',   fr:'kibboutz',            cat:['pza','nom'] },
+  { heb:'שַׁבָּת',   trans:'shabat',   fr:'Shabbat / samedi',    cat:['pza','nom'] },
+  { heb:'תַּלְמוּד', trans:'talmud',   fr:'Talmud',              cat:['pza','nom'] },
+  { heb:'תַּנַ״ךְ',  trans:"tanakh",   fr:'Bible hébraïque (Tanakh)',cat:['pza','nom'] },
+  { heb:'דִּיסְקוֹטֵק',trans:"disqoteq",fr:'discothèque',        cat:['pza','nom'] },
+  { heb:'טֶלֶפוֹן',  trans:'telefon',  fr:'téléphone',           cat:['pza','nom'] },
+  { heb:'יוֹגָה',    trans:'yoga',     fr:'yoga',                cat:['pza','nom'] },
+  { heb:'מֶדִיטַצְיָה',trans:"meditatsya",fr:'méditation',       cat:['pza','nom'] },
+  { heb:'פִּילוֹסוֹפִיָּה',trans:"filosofiya",fr:'philosophie',   cat:['pza','nom'] },
+  { heb:'פִּיקְנִיק', trans:'piqnik',   fr:'pique-nique',         cat:['pza','nom'] },
+  { heb:'קָפֶטֶרְיָה',trans:"qafeterya",fr:'cafétéria',          cat:['pza','nom'] },
+  { heb:'כּוּלָּם',  trans:'kulam',    fr:'tout le monde / tous',cat:['pza','divers'] },
+
+  // ══════════════════════════════════
+  // ── שיעור 1 ── Noms
+  { heb:'אֶפֶס',     trans:"'efes",    fr:'zéro',                cat:['s1','nom'] },
+  { heb:'בֹּקֶר',    trans:'boqer',    fr:'matin',               cat:['s1','nom'] },
+  { heb:'חֲנוּת',    trans:"hanut",    fr:'boutique / magasin',  cat:['s1','nom'] },
+  { heb:'לַחְמַנִיָּה',trans:"lahmaniya",fr:'petit pain / rouleau',cat:['s1','nom'] },
+  { heb:'לַיְלָה',   trans:'layla',    fr:'nuit',                cat:['s1','nom'] },
+  { heb:'מִסְפָּר',  trans:'mispar',   fr:'numéro / nombre',     cat:['s1','nom'] },
+  { heb:'סְפָרִיָּה', trans:"sfariya",  fr:'bibliothèque',        cat:['s1','nom'] },
+  { heb:'עֲבוֹדָה',  trans:"'avoda",   fr:'travail',             cat:['s1','nom'] },
+  { heb:'עֶרֶב',     trans:"'erev",    fr:'soir',                cat:['s1','nom'] },
+  { heb:'צָהֳרַיִם', trans:"tsahorayim",fr:'après-midi / midi',  cat:['s1','nom'] },
+  { heb:'רְחוֹב',    trans:"rehov",    fr:'rue',                 cat:['s1','nom'] },
+  { heb:'שִׁירוּתִים',trans:"shirутim", fr:'toilettes',           cat:['s1','nom'] },
+  { heb:'אוֹטוֹבּוּס',trans:"'otobus",  fr:'bus / autobus',       cat:['s1','nom'] },
+  { heb:'הִיסְטוֹרִיָּה',trans:"historiya",fr:'histoire',         cat:['s1','nom'] },
+  { heb:'סִימְפוֹנִיָּה',trans:"simfoniya",fr:'symphonie',        cat:['s1','nom'] },
+  { heb:'רוֹק',      trans:'rоq',      fr:'rock (musique)',       cat:['s1','nom'] },
+  { heb:'אַרְכֵּיאוֹלוֹג',trans:"arqe'olog",fr:'archéologue',     cat:['s1','nom'] },
+  { heb:'דּוֹקְטוֹר',trans:"doqtor",   fr:'docteur / médecin',   cat:['s1','nom'] },
+  { heb:'מוֹדִיעִין',trans:"modi'in",  fr:'renseignements / annuaire',cat:['s1','nom'] },
+  // ── שיעור 1 ── Verbes
+  { heb:'אוֹמֵר',    trans:"'omer",    fr:'dit / parle (m.)',     cat:['s1','verbe'] },
+  { heb:'מֵבִין',    trans:'mevin',    fr:'comprend (m.)',        cat:['s1','verbe'] },
+  { heb:'מִצְטַעֵר', trans:'mitsta\'er',fr:'est désolé (m.)',     cat:['s1','verbe'] },
+  { heb:'נוֹסֵעַ',   trans:"nose'a",   fr:'voyage / roule (m.)', cat:['s1','verbe'] },
+  { heb:'עוֹבֵד',    trans:"'oved",    fr:'travaille (m.)',       cat:['s1','verbe'] },
+  { heb:'קוֹנֶה',    trans:'qone',     fr:'achète (m.)',          cat:['s1','verbe'] },
+  { heb:'שׁוֹמֵעַ',  trans:"shome'a",  fr:'entend / écoute (m.)',cat:['s1','verbe'] },
+  // ── שיעור 1 ── Expressions / divers
+  { heb:'אֵין דָּבָר',trans:"'ein davar",fr:'ce n\'est rien / de rien',cat:['s1','divers'] },
+  { heb:'בָּטַח',    trans:'batah',    fr:'bien sûr / certainement',cat:['s1','divers'] },
+  { heb:'גַּם וְגַם',trans:"gam ve-gam",fr:'et aussi... / et l\'un et l\'autre',cat:['s1','divers'] },
+  { heb:'יָמִינָה',  trans:'yamina',   fr:'à droite',            cat:['s1','divers'] },
+  { heb:'יָשָׁר',    trans:'yashar',   fr:'tout droit',          cat:['s1','divers'] },
+  { heb:'נָכוֹן',    trans:'nakhon',   fr:'correct / juste',     cat:['s1','divers'] },
+  { heb:'שְׂמֹאלָה', trans:"smola",    fr:'à gauche',            cat:['s1','divers'] },
+  { heb:'שְׁתֵּי',   trans:'shtei',    fr:'deux (devant nom f.)',cat:['s1','divers'] },
+  { heb:'אֵיךְ?',    trans:"'ekh?",    fr:'comment ?',           cat:['s1','question'] },
+  { heb:'כַּמָּה?',  trans:"kama?",    fr:'combien ?',           cat:['s1','question'] },
+  { heb:'מָתַי?',    trans:"matay?",   fr:'quand ?',             cat:['s1','question'] },
+  { heb:'בְּבֹקֶר',  trans:'bevoqer',  fr:'le matin',            cat:['s1','divers'] },
+  { heb:'בְּצָהֳרַיִם',trans:"betsahorayim",fr:'l\'après-midi',  cat:['s1','divers'] },
+  { heb:'בָּעֶרֶב',  trans:"ba'erev",  fr:'le soir',             cat:['s1','divers'] },
+  { heb:'בַּלַּיְלָה',trans:'balayla',  fr:'la nuit',             cat:['s1','divers'] },
+  { heb:'הֲלוֹ',     trans:'halo',     fr:'allô',                cat:['s1','divers'] },
+
+  // ══════════════════════════════════
+  // ── שיעור 2 ── Noms (logement & pièces)
+  { heb:'דִּירָה',   trans:'dira',     fr:'appartement',         cat:['s2','nom'] },
+  { heb:'חֶדֶר',     trans:'heder',    fr:'pièce / chambre',     cat:['s2','nom'] },
+  { heb:'מִטְבָּח',  trans:'mitbah',   fr:'cuisine',             cat:['s2','nom'] },
+  { heb:'מִקְלַחַת', trans:'miqlahat', fr:'salle de bain / douche',cat:['s2','nom'] },
+  { heb:'גִּינָה',   trans:'gina',     fr:'jardin',              cat:['s2','nom'] },
+  { heb:'סָלוֹן',    trans:'salon',    fr:'salon',               cat:['s2','nom'] },
+  // ── שיעור 2 ── Adjectifs
+  { heb:'גָּדוֹל',   trans:'gadol',    fr:'grand (m.)',           cat:['s2','divers'] },
+  { heb:'גְּדוֹלָה',  trans:'gdola',    fr:'grande (f.)',          cat:['s2','divers'] },
+  { heb:'קָטָן',     trans:'qatan',    fr:'petit (m.)',           cat:['s2','divers'] },
+  { heb:'קְטַנָּה',  trans:"qtana",    fr:'petite (f.)',          cat:['s2','divers'] },
+  { heb:'יָשָׁן',    trans:'yashan',   fr:'vieux / ancien (m.)', cat:['s2','divers'] },
+  { heb:'יְשָׁנָה',  trans:'yshana',   fr:'vieille / ancienne (f.)',cat:['s2','divers'] },
+  { heb:'חָדָשׁ',    trans:'hadash',   fr:'nouveau / neuf (m.)', cat:['s2','divers'] },
+  { heb:'חֲדָשָׁה',  trans:'hadasha',  fr:'nouvelle / neuve (f.)',cat:['s2','divers'] },
+  { heb:'יָפֶה',     trans:'yafe',     fr:'beau / joli (m.)',     cat:['s2','divers'] },
+  { heb:'יָפָה',     trans:'yafa',     fr:'belle / jolie (f.)',   cat:['s2','divers'] },
+  { heb:'טוֹב',      trans:'tov',      fr:'bon / bien (m.)',      cat:['s2','divers'] },
+  { heb:'טוֹבָה',    trans:'tova',     fr:'bonne / bien (f.)',    cat:['s2','divers'] },
+  { heb:'מְיֻחָד',   trans:"meyuhad",  fr:'spécial / particulier (m.)',cat:['s2','divers'] },
+  { heb:'עַתִּיק',   trans:"'atiq",    fr:'antique / ancien',    cat:['s2','divers'] },
+  // ── שיעור 2 ── Divers
+  { heb:'צָהֳרַיִם טוֹבִים!',trans:"tsahorayim tovim!",fr:'bon après-midi!',cat:['s2','divers'] },
+  { heb:'לֵילָה טוֹב!',trans:"layla tov!",fr:'bonne nuit!',      cat:['s2','divers'] },
+  { heb:'מְצוּיָּנֶת',trans:"metsuyenet",fr:'excellent! (f.)',    cat:['s2','divers'] },
+  { heb:'מוּצָא',    trans:"motsa",    fr:'origine',             cat:['s2','nom'] },
+
+  // ── שיעור 2 (suite p.137) ── Noms supplémentaires
+  { heb:'אַהֲבָה',   trans:"'ahava",   fr:'amour',               cat:['s2','nom'] },
+  { heb:'אַרְמוֹן',  trans:"'armon",   fr:'château / palais',    cat:['s2','nom'] },
+  { heb:'בָּחוּר',   trans:'bahur',    fr:'jeune homme',         cat:['s2','nom'] },
+  { heb:'חֶדֶר',     trans:'heder',    fr:'pièce / chambre',     cat:['s2','nom'] },
+  { heb:'חֲנֻכִּיָּה',trans:"hanukiya", fr:'hanoukkia (chandelier)',cat:['s2','nom'] },
+  { heb:'מַחְבֶּרֶת',trans:'mahberet', fr:'cahier',              cat:['s2','nom'] },
+  { heb:'עֵץ',       trans:"'ets",     fr:'arbre',               cat:['s2','nom'] },
+  { heb:'צִיּוּר',   trans:"tsiyur",   fr:'dessin / tableau',    cat:['s2','nom'] },
+  { heb:'שֻׁלְחָן',  trans:"shulhan",  fr:'table',               cat:['s2','nom'] },
+  { heb:'אַמְפִיתֵּאַטְרוֹן',trans:"'amfite'atron",fr:'amphithéâtre',cat:['s2','nom'] },
+  { heb:'בָּלֶט',    trans:'balet',    fr:'ballet',              cat:['s2','nom'] },
+  { heb:'קֵיסָר',    trans:"qeysar",   fr:'empereur / César',    cat:['s2','nom'] },
+  { heb:'מוֹדֶרְנִי',trans:"moderni",  fr:'moderne (m.)',         cat:['s2','divers'] },
+  { heb:'קְלָסִי',   trans:"qlasi",    fr:'classique (m.)',       cat:['s2','divers'] },
+  { heb:'נֶחְמָד',   trans:"nehemad",  fr:'sympa / agréable (m.)',cat:['s2','divers'] },
+  { heb:'בִּקְשֶׁר לְ...', trans:"biqsher le...",fr:'en lien avec / à propos de',cat:['s2','divers'] },
+  { heb:'כְּמוֹ',    trans:"kmo",      fr:'comme / tel que',     cat:['s2','divers'] },
+  { heb:'לְמָשָׁל',  trans:"lmashal",  fr:'par exemple',         cat:['s2','divers'] },
+  { heb:'לִפְעָמִים',trans:"lif'amim", fr:'parfois',             cat:['s2','divers'] },
+  { heb:'עַל שֵׁם',  trans:"'al shem", fr:'au nom de / nommé d\'après',cat:['s2','divers'] },
+  { heb:'אֵיזֶה?',   trans:"'eze?",    fr:'quel ? / quelle ? (m.)',cat:['s2','question'] },
+  { heb:'אֵיזוֹ?',   trans:"'ezo?",    fr:'quelle ? (f.)',        cat:['s2','question'] },
+  { heb:'אֵילוּ?',   trans:"'eylu?",   fr:'quels ? / lesquels ?',cat:['s2','question'] },
+
+  // ══════════════════════════════════
+  // ── שיעור 3 ── Noms
+  { heb:'אֹהֶל',     trans:"'ohel",    fr:'tente',               cat:['s3','nom'] },
+  { heb:'אַכְסַנְיָה',trans:"'aksanya", fr:'auberge de jeunesse', cat:['s3','nom'] },
+  { heb:'בֵּית כְּנֶסֶת',trans:"beyt kneset",fr:'synagogue',     cat:['s3','nom'] },
+  { heb:'גֶּבֶר',    trans:'gever',    fr:'homme / monsieur',    cat:['s3','nom'] },
+  { heb:'דַּקָּה',   trans:'daqa',     fr:'minute',              cat:['s3','nom'] },
+  { heb:'יוֹם',      trans:'yom',      fr:'jour',                cat:['s3','nom'] },
+  { heb:'כִּסֵּא',   trans:"kise'",    fr:'chaise',              cat:['s3','nom'] },
+  { heb:'מִיטָה',    trans:'mita',     fr:'lit',                 cat:['s3','nom'] },
+  { heb:'מִילָּה',   trans:'mila',     fr:'mot',                 cat:['s3','nom'] },
+  { heb:'מָקוֹם',    trans:'maqom',    fr:'endroit / place',     cat:['s3','nom'] },
+  { heb:'פִּיתָּה',  trans:'pita',     fr:'pain pita',           cat:['s3','nom'] },
+  { heb:'רָהִיט',    trans:'rahit',    fr:'meuble',              cat:['s3','nom'] },
+  { heb:'שָׂטִיחַ',  trans:'satiah',   fr:'tapis',               cat:['s3','nom'] },
+  { heb:'שֶׁקֶל',    trans:"sheqel",   fr:'shekel (monnaie)',    cat:['s3','nom'] },
+  { heb:'חוּמוּס',   trans:'humus',    fr:'houmous',             cat:['s3','nom'] },
+  { heb:'כַּסְפּוֹמַט',trans:"kaspomat",fr:'distributeur (ATM)', cat:['s3','nom'] },
+  { heb:'בֶּדְוִי',  trans:'bedvi',    fr:'Bédouin',             cat:['s3','nom'] },
+  { heb:'אֶחָד',     trans:"'ehad",    fr:'un (m., nombre)',     cat:['s3','divers'] },
+  { heb:'שְׁנַיִם',  trans:"shnayim",  fr:'deux (m.)',           cat:['s3','divers'] },
+  { heb:'שְׁלוֹשָׁה',trans:"shlosha",  fr:'trois (m.)',          cat:['s3','divers'] },
+  { heb:'אַרְבָּעָה',trans:"'arba'a",  fr:'quatre (m.)',         cat:['s3','divers'] },
+  { heb:'חֲמִישָׁה', trans:"hamisha",  fr:'cinq (m.)',           cat:['s3','divers'] },
+  { heb:'שִׁישָּׁה',  trans:"shisha",   fr:'six (m.)',            cat:['s3','divers'] },
+  { heb:'שִׁבְעָה',  trans:"shiv'a",   fr:'sept (m.)',           cat:['s3','divers'] },
+  { heb:'שְׁמוֹנָה', trans:"shmona",   fr:'huit (m.)',           cat:['s3','divers'] },
+  { heb:'תִּשְׁעָה', trans:"tish'a",   fr:'neuf (m.)',           cat:['s3','divers'] },
+  { heb:'עֲשָׂרָה',  trans:"'asara",   fr:'dix (m.)',            cat:['s3','divers'] },
+  { heb:'אֶלֶף',     trans:"'elef",    fr:'mille',               cat:['s3','divers'] },
+  { heb:'חֲמִישִׁים',trans:"hamishim", fr:'cinquante',           cat:['s3','divers'] },
+  { heb:'מֵאָה',     trans:"me'a",     fr:'cent',                cat:['s3','divers'] },
+  { heb:'אַלְפַּיִם',trans:"'alpayim", fr:'deux mille',          cat:['s3','divers'] },
+  // ── שיעור 3 ── Verbes
+  { heb:'אוֹכֵל',    trans:"'okhel",   fr:'mange (m.)',          cat:['s3','verbe'] },
+  { heb:'יוֹשֵׁב',   trans:"yoshev",   fr:'est assis / habite (m.)',cat:['s3','verbe'] },
+  { heb:'מְטַיֵּל',  trans:"metayel",  fr:'se promène / voyage (m.)',cat:['s3','verbe'] },
+  { heb:'עוֹלֶה',    trans:"'ole",     fr:'coûte / monte (m.)',  cat:['s3','verbe'] },
+  // ── שיעור 3 ── Adjectifs / divers
+  { heb:'אַחֵר',     trans:"'aher",    fr:'autre (m.)',          cat:['s3','divers'] },
+  { heb:'בְּשָׂרִי',  trans:"besari",   fr:'de viande (m.)',      cat:['s3','divers'] },
+  { heb:'חָלָבִי',   trans:"halavi",   fr:'laitier / dairy (m.)',cat:['s3','divers'] },
+  { heb:'יִשְׂרְאֵלִי',trans:"yisre'eli",fr:'israélien (m.)',     cat:['s3','divers'] },
+  { heb:'כָּל',      trans:'kol',      fr:'tout / chaque',       cat:['s3','divers'] },
+  { heb:'מַשֶּׁהוּ',  trans:"mashehu",  fr:'quelque chose',       cat:['s3','divers'] },
+  { heb:'עוֹד',      trans:"'od",      fr:'encore / plus',       cat:['s3','divers'] },
+  { heb:'תּוֹדָה רַבָּה',trans:"toda raba",fr:'merci beaucoup',  cat:['s3','divers'] },
+
+  // ══════════════════════════════════
+  // ── שיעור 4 ── Verbes (את — complément direct)
+  { heb:'מוֹכֵר',    trans:"mokher",   fr:'vend (m.)',           cat:['s4','verbe'] },
+  { heb:'מְחַפֵּשׂ', trans:"mehapes",  fr:'cherche (m.)',        cat:['s4','verbe'] },
+  { heb:'רוֹצֶה',    trans:"rotse",    fr:'veut / désire (m.)',  cat:['s4','verbe'] },
+  { heb:'רוֹאֶה',    trans:"ro'e",     fr:'voit (m.)',           cat:['s4','verbe'] },
+  { heb:'פּוֹגֵשׁ',   trans:"pogesh",   fr:'rencontre (m.)',      cat:['s4','verbe'] },
+  { heb:'מַכִּיר',   trans:"makir",    fr:'connaît / reconnaît (m.)',cat:['s4','verbe'] },
+  // ── שיעור 4 ── Noms
+  { heb:'דּוֹד',      trans:"dod",      fr:'oncle',               cat:['s4','nom'] },
+  { heb:'דּוֹדָה',    trans:"doda",     fr:'tante',               cat:['s4','nom'] },
+  { heb:'כֶּסֶף',     trans:"kesef",    fr:'argent',              cat:['s4','nom'] },
+  { heb:'מוֹכֶרֶת',  trans:"mokheret", fr:'vendeuse / vendeuse', cat:['s4','nom'] },
+  { heb:'עִיתוֹן',    trans:"'iton",    fr:'journal / gazette',   cat:['s4','nom'] },
+  { heb:'שָׁבוּעַ',   trans:"shavu'a",  fr:'semaine',             cat:['s4','nom'] },
+  { heb:'תִּיק',      trans:"tiq",      fr:'sac / serviette',     cat:['s4','nom'] },
+  { heb:'פַּסְפּוֹרְט',trans:"pasport",  fr:'passeport',           cat:['s4','nom'] },
+  { heb:'סִיגַרְיָה', trans:"sigarya",  fr:'cigarette',           cat:['s4','nom'] },
+  { heb:'טָאִי צִ׳י', trans:"tai tsi",  fr:'tai-chi',             cat:['s4','nom'] },
+  { heb:'טְחִינָה',   trans:"tehina",   fr:'tahini',              cat:['s4','nom'] },
+  // ── שיעור 4 ── Jours de la semaine
+  { heb:'יוֹם רִאשׁוֹן',trans:"yom rishon",fr:'dimanche',         cat:['s4','nom'] },
+  { heb:'יוֹם שֵׁנִי',  trans:"yom sheni", fr:'lundi',            cat:['s4','nom'] },
+  { heb:'יוֹם שְׁלִישִׁי',trans:"yom shlishi",fr:'mardi',         cat:['s4','nom'] },
+  { heb:'יוֹם רְבִיעִי',trans:"yom revi'i",fr:'mercredi',         cat:['s4','nom'] },
+  { heb:'יוֹם חֲמִישִׁי',trans:"yom hamishi",fr:'jeudi',          cat:['s4','nom'] },
+  { heb:'יוֹם שִׁישִׁי', trans:"yom shishi",fr:'vendredi',        cat:['s4','nom'] },
+  // ── שיעור 4 ── Adjectifs / divers
+  { heb:'זוֹל',       trans:"zol",      fr:'bon marché / pas cher',cat:['s4','divers'] },
+  { heb:'נָכוֹן',     trans:"nakhon",   fr:'juste / correct',     cat:['s4','divers'] },
+  { heb:'הַיּוֹם',    trans:"hayom",    fr:'aujourd\'hui',        cat:['s4','divers'] },
+  { heb:'מָחָר',      trans:"mahar",    fr:'demain',              cat:['s4','divers'] },
+  { heb:'זֶהוּ',      trans:"zehu",     fr:'c\'est ça / voilà',   cat:['s4','divers'] },
+  { heb:'הַכֹּתֶל הַמַּעֲרָבִי',trans:"hakotel hama'aravi",fr:'le Mur occidental (des Lamentations)',cat:['s4','nom'] },
+  { heb:'אֶת',        trans:"'et",      fr:'(marque du complément direct défini)',cat:['s4','divers'] },
+  { heb:'אַהֲלָן',    trans:"'ahalan",  fr:'salut! (emprunt arabe)',cat:['s4','divers'] },
+
+  // ══════════════════════════════════
+  // ── שיעור 5 ── Noms
+  { heb:'אָלֶף-בֵּית', trans:"'alef-bet",fr:'alphabet (hébreu)',   cat:['s5','nom'] },
+  { heb:'בֶּגֶד',      trans:"beged",    fr:'vêtement / habit',    cat:['s5','nom'] },
+  { heb:'בְּגָדִים',   trans:"bgadim",   fr:'vêtements / habits',  cat:['s5','nom'] },
+  { heb:'בַּעַל',      trans:"ba'al",    fr:'mari / propriétaire', cat:['s5','nom'] },
+  { heb:'גְּנִיזָה',   trans:"geniza",   fr:'gueniza (archives synagogue)',cat:['s5','nom'] },
+  { heb:'זְמַן',       trans:"zman",     fr:'temps',               cat:['s5','nom'] },
+  { heb:'יְהוּדִי',    trans:"yehudi",   fr:'Juif (m.)',            cat:['s5','nom'] },
+  { heb:'יְהוּדִיָּה', trans:"yehudia",  fr:'Juive (f.)',           cat:['s5','nom'] },
+  { heb:'מֵאָה',       trans:"me'a",     fr:'siècle / cent',       cat:['s5','nom'] },
+  { heb:'רַב',         trans:"rav",      fr:'rabbin',              cat:['s5','nom'] },
+  { heb:'שֵׁם',        trans:"shem",     fr:'nom',                 cat:['s5','nom'] },
+  { heb:'אֵי-מֵייל',  trans:"'e-meyl",  fr:'e-mail / courriel',   cat:['s5','nom'] },
+  { heb:'מוּזִיקָלִי', trans:"muziqali", fr:'musical (m.)',         cat:['s5','nom'] },
+  { heb:'גִ׳ינְס',     trans:"jins",     fr:'jeans',               cat:['s5','nom'] },
+  { heb:'קָרִיירָה',   trans:"qariyera", fr:'carrière',            cat:['s5','nom'] },
+  { heb:'קוּרְס',      trans:"qurs",     fr:'cours',               cat:['s5','nom'] },
+  // ── שיעור 5 ── Verbes
+  { heb:'חוֹשֵׁב',     trans:"hoshev",   fr:'pense / réfléchit (m.)',cat:['s5','verbe'] },
+  { heb:'לַחְשׁוֹב',   trans:"lahshov",  fr:'penser',              cat:['s5','verbe'] },
+  { heb:'לוֹבֵשׁ',     trans:"lovesh",   fr:'porte / revêt (m.)',  cat:['s5','verbe'] },
+  { heb:'לִלְבּוֹשׁ',  trans:"lilbosh",  fr:'porter / mettre (vêtement)',cat:['s5','verbe'] },
+  { heb:'רָץ',         trans:"rats",     fr:'court (m.)',          cat:['s5','verbe'] },
+  { heb:'לָרוּץ',      trans:"larutz",   fr:'courir',              cat:['s5','verbe'] },
+  { heb:'שׁוֹאֵל',     trans:"sho'el",   fr:'demande / interroge (m.)',cat:['s5','verbe'] },
+  { heb:'לִשְׁאוֹל',   trans:"lish'ol",  fr:'demander / poser une question',cat:['s5','verbe'] },
+  { heb:'קָם',         trans:"qam",      fr:'se lève (m.)',        cat:['s5','verbe'] },
+  { heb:'לָקוּם',      trans:"laqum",    fr:'se lever',            cat:['s5','verbe'] },
+  { heb:'גָּר',        trans:"gar",      fr:'habite / réside (m.)',cat:['s5','verbe'] },
+  { heb:'לָגוּר',      trans:"lagur",    fr:'habiter / résider',   cat:['s5','verbe'] },
+  // ── שיעור 5 ── Adverbes / divers
+  { heb:'בְּשֶׁקֶט',   trans:"besheqet", fr:'silencieusement / doucement',cat:['s5','divers'] },
+  { heb:'לְאַט',       trans:"le'at",    fr:'lentement',           cat:['s5','divers'] },
+  { heb:'מַהֵר',       trans:"maher",    fr:'vite / rapidement',   cat:['s5','divers'] },
+  { heb:'מִישֶׁהוּ',   trans:"mishehu",  fr:'quelqu\'un',          cat:['s5','divers'] },
+  { heb:'מַשֶּׁהוּ',   trans:"mashehu",  fr:'quelque chose',       cat:['s5','divers'] },
+  { heb:'קָשֶׁה',      trans:"qashe",    fr:'difficile / dur',     cat:['s5','divers'] },
+  { heb:'יָפֶה',       trans:"yafe",     fr:'bien / joliment (adv.)',cat:['s5','divers'] },
+  { heb:'מְצוּיָּן',   trans:"metsuyyan",fr:'excellent (adv.)',     cat:['s5','divers'] },
+  { heb:'שְׁמִי',      trans:"shmi",     fr:'mon nom (est)',        cat:['s5','divers'] },
+  { heb:'מַה שִּׁמְךָ?',trans:"ma shimkha?",fr:'comment tu t\'appelles? (m.)',cat:['s5','question'] },
+  { heb:'מַה שְּׁמֵךְ?',trans:"ma shmekh?",fr:'comment tu t\'appelles? (f.)',cat:['s5','question'] },
+  { heb:'אֵין זְמַן',  trans:"'ein zman",fr:'il n\'y a pas le temps',cat:['s5','divers'] },
+  { heb:'יֵשׁ זְמַן',  trans:"yesh zman",fr:'il y a le temps',     cat:['s5','divers'] },
+  // ── שיעור 5 ── Infinitifs (שם פועל) — verbes forts בניין פעל
+  { heb:'לִלְמוֹד',    trans:"lilmod",   fr:'apprendre / étudier', cat:['s5','verbe'] },
+  { heb:'לִכְתּוֹב',   trans:"likhtov",  fr:'écrire',              cat:['s5','verbe'] },
+  { heb:'לִפְגּוֹשׁ',  trans:"lifgosh",  fr:'rencontrer',          cat:['s5','verbe'] },
+  { heb:'לִקְרוֹא',    trans:"liqro'",   fr:'lire / appeler',      cat:['s5','verbe'] },
+  { heb:'לִשְׁמוֹעַ',  trans:"lishmoa'", fr:'entendre / écouter',  cat:['s5','verbe'] },
+  { heb:'לִנְסוֹעַ',   trans:"linso'a",  fr:'voyager / partir (en véhicule)',cat:['s5','verbe'] },
+  { heb:'לַעֲבוֹד',    trans:"la'avod",  fr:'travailler',          cat:['s5','verbe'] },
+  { heb:'לַחְשׁוֹב',   trans:"lahshov",  fr:'penser',              cat:['s5','verbe'] },
+  { heb:'לֶאֱכוֹל',    trans:"le'ekhol", fr:'manger',              cat:['s5','verbe'] },
+  { heb:'לֶאֱהוֹב',    trans:"le'ehov",  fr:'aimer',               cat:['s5','verbe'] },
+  { heb:'לוֹמַר',      trans:"lomar",    fr:'dire',                cat:['s5','verbe'] },
+  // ── שיעור 5 ── Rôle הגניזה בקהיר
+  { heb:'בֵּית כְּנֶסֶת',trans:"beyt kneset",fr:'synagogue',       cat:['s5','nom'] },
+  { heb:'מִינְיָן',    trans:"minyan",   fr:'minyan (quorum de 10)',cat:['s5','nom'] },
+  { heb:'תּוֹרָה',     trans:"tora",     fr:'Torah',               cat:['s5','nom'] },
+  { heb:'מִשְׁנָה',    trans:"mishna",   fr:'Mishna',              cat:['s5','nom'] },
+  { heb:'תַּלְמוּד',   trans:"talmud",   fr:'Talmud',              cat:['s5','nom'] },
+
+  // ══════════════════════════════════
+  // ── שיעור 6 ── Verbes
+  { heb:'חוֹזֵר',      trans:"hozer",    fr:'revient / retourne (m.)',cat:['s6','verbe'] },
+  { heb:'לַחֲזוֹר',    trans:"lahazor",  fr:'retourner / revenir',  cat:['s6','verbe'] },
+  { heb:'מְשַׁחֵק',    trans:"meshaheq", fr:'joue (m.)',            cat:['s6','verbe'] },
+  { heb:'לְשַׂחֵק',    trans:"lesaheq",  fr:'jouer',               cat:['s6','verbe'] },
+  { heb:'רוֹקֵד',      trans:"roqed",    fr:'danse (m.)',           cat:['s6','verbe'] },
+  { heb:'לִרְקוֹד',    trans:"lirqod",   fr:'danser',              cat:['s6','verbe'] },
+  { heb:'מְשַׁחֶקֶת',  trans:"meshaheqet",fr:'joue (f.)',           cat:['s6','verbe'] },
+  // ── שיעור 6 ── Noms
+  { heb:'אָדָם',       trans:"'adam",    fr:'être humain / homme',  cat:['s6','nom'] },
+  { heb:'אֹכֶל',       trans:"'okhel",   fr:'nourriture / repas',  cat:['s6','nom'] },
+  { heb:'אֲרוּחָה',    trans:"'aruha",   fr:'repas',               cat:['s6','nom'] },
+  { heb:'בֵּית סֵפֶר', trans:"beyt sefer",fr:'école',              cat:['s6','nom'] },
+  { heb:'הוֹרִים',     trans:"horim",    fr:'parents',             cat:['s6','nom'] },
+  { heb:'הֶפְסֵקָה',   trans:"hepseqa",  fr:'pause / récréation',  cat:['s6','nom'] },
+  { heb:'חַקְלָאוּת',  trans:"haqlaut",  fr:'agriculture',         cat:['s6','nom'] },
+  { heb:'טֶבַע',       trans:"teva",     fr:'nature',              cat:['s6','nom'] },
+  { heb:'טִיּוּל',     trans:"tiyul",    fr:'promenade / randonnée',cat:['s6','nom'] },
+  { heb:'מְכוֹנָה',    trans:"mekhona",  fr:'machine / voiture',   cat:['s6','nom'] },
+  { heb:'מִתְנַדֵּב',  trans:"mitnadeved",fr:'bénévole / volontaire (m.)',cat:['s6','nom'] },
+  { heb:'שְׁאֵלָה',    trans:"she'ela",  fr:'question',            cat:['s6','nom'] },
+  { heb:'תַּבְלִין',   trans:"tavlin",   fr:'épice',               cat:['s6','nom'] },
+  { heb:'מִיקְרוֹ-גַּל',trans:"miqro-gal",fr:'micro-onde',         cat:['s6','nom'] },
+  { heb:'קִילוֹמֶטֶר', trans:"qilometer",fr:'kilomètre',           cat:['s6','nom'] },
+  { heb:'בֵּית יְלָדִים',trans:"beyt yeladim",fr:'"maison des enfants" (kibboutz)',cat:['s6','nom'] },
+  { heb:'אִידֵאוֹלוֹגִיָּה',trans:"ide'ologiya",fr:'idéologie',     cat:['s6','nom'] },
+  { heb:'דִּיאֶטָה',   trans:"di'eta",   fr:'régime (alimentaire)',cat:['s6','nom'] },
+  { heb:'כִּימִיקָלִים',trans:"kimiqalim",fr:'produits chimiques', cat:['s6','nom'] },
+  { heb:'מוֹדֶרְנִיזַצְיָה',trans:"modernizatsya",fr:'modernisation',cat:['s6','nom'] },
+  // ── שיעור 6 ── Adjectifs
+  { heb:'מְעַנְיֵן',   trans:"me'anyen", fr:'intéressant (m.)',     cat:['s6','divers'] },
+  { heb:'מְעַנְיֶנֶת', trans:"me'anyenet",fr:'intéressante (f.)',   cat:['s6','divers'] },
+  { heb:'נָעִים',      trans:"na'im",    fr:'agréable (m.)',        cat:['s6','divers'] },
+  { heb:'נְעִימָה',    trans:"ne'ima",   fr:'agréable (f.)',        cat:['s6','divers'] },
+  { heb:'קַל',         trans:"qal",      fr:'facile / léger (m.)', cat:['s6','divers'] },
+  { heb:'קָלָה',       trans:"qala",     fr:'facile / légère (f.)',cat:['s6','divers'] },
+  { heb:'אוֹרְגָנִי',  trans:"'organi",  fr:'organique (m.)',       cat:['s6','divers'] },
+  // ── שיעור 6 ── Divers / expressions
+  { heb:'בְּלִי',      trans:"bli",      fr:'sans',                cat:['s6','divers'] },
+  { heb:'בְּיַחַד',   trans:"beyahad",  fr:'ensemble / en commun',cat:['s6','divers'] },
+  { heb:'כִּי',        trans:"ki",       fr:'parce que / car',     cat:['s6','divers'] },
+  { heb:'לְמָה?',      trans:"lama?",    fr:'pourquoi?',           cat:['s6','question'] },
+  { heb:'לְפִי',       trans:"lefi",     fr:'selon / d\'après',    cat:['s6','divers'] },
+  { heb:'מַה נִּשְׁמָע?', trans:"ma nishma?",fr:'quoi de neuf?',   cat:['s6','question'] },
+  { heb:'עֶרֶב שַׁבָּת',trans:"'erev shabat",fr:'veille du Chabbat (vendredi soir)',cat:['s6','nom'] },
+  // ── שיעור 6 ── Nombres 20-100
+  { heb:'עֶשְׂרִים',   trans:"'esrim",   fr:'vingt',               cat:['s6','divers'] },
+  { heb:'שְׁלוֹשִׁים', trans:"shloshim", fr:'trente',              cat:['s6','divers'] },
+  { heb:'אַרְבָּעִים', trans:"'arba'im", fr:'quarante',            cat:['s6','divers'] },
+  { heb:'חֲמִישִּׁים', trans:"hamishim", fr:'cinquante',           cat:['s6','divers'] },
+  { heb:'שִׁישִּׁים',  trans:"shishim",  fr:'soixante',            cat:['s6','divers'] },
+  { heb:'שִׁבְעִים',   trans:"shiv'im",  fr:'soixante-dix',        cat:['s6','divers'] },
+  { heb:'שְׁמוֹנִים',  trans:"shmonim",  fr:'quatre-vingts',       cat:['s6','divers'] },
+  { heb:'תִּשְׁעִים',  trans:"tish'im",  fr:'quatre-vingt-dix',    cat:['s6','divers'] },
+
+  // ══════════════════════════════════
+  // ── פסק זמן ב׳ ── Noms
+  { heb:'אֶנֶרְגִיָּה', trans:"'energiya",fr:'énergie',            cat:['pzb','nom'] },
+  { heb:'סִמֶסְטֶר',   trans:"simestr",  fr:'semestre',            cat:['pzb','nom'] },
+  // ── פסק זמן ב׳ ── Adjectifs
+  { heb:'אִידֵאָלִי',  trans:"'ide'ali", fr:'idéal (m.)',          cat:['pzb','divers'] },
+  { heb:'אִידֵאָלִית', trans:"'ide'alit",fr:'idéale (f.)',         cat:['pzb','divers'] },
+  { heb:'נוֹרְמָלִי',  trans:"normali",  fr:'normal (m.)',         cat:['pzb','divers'] },
+  { heb:'נוֹרְמָלִית', trans:"normalit", fr:'normale (f.)',        cat:['pzb','divers'] },
+  { heb:'רֵאָלִי',     trans:"re'ali",   fr:'réel / actuel (m.)', cat:['pzb','divers'] },
+  { heb:'רֵאָלִית',    trans:"re'alit",  fr:'réelle / actuelle (f.)',cat:['pzb','divers'] },
+  { heb:'רֵפוֹרְמִי',  trans:"reformi",  fr:'réformé (m., juif)', cat:['pzb','divers'] },
+  { heb:'רֵפוֹרְמִית', trans:"reformit", fr:'réformée (f.)',       cat:['pzb','divers'] },
+
+  // ══════════════════════════════════
+  // ── שיעור 7 ── Verbes (גזרת ל"ה)
+  { heb:'בּוֹנֶה',     trans:"bone",     fr:'construit (m.)',      cat:['s7','verbe'] },
+  { heb:'לִבְנוֹת',    trans:"livnot",   fr:'construire',          cat:['s7','verbe'] },
+  { heb:'קוֹנֶה',      trans:"qone",     fr:'achète (m.)',         cat:['s7','verbe'] },
+  { heb:'לִקְנוֹת',    trans:"liqnot",   fr:'acheter',             cat:['s7','verbe'] },
+  { heb:'רוֹצֶה',      trans:"rotse",    fr:'veut (m.)',           cat:['s7','verbe'] },
+  { heb:'לִרְצוֹת',    trans:"lirtsot",  fr:'vouloir',             cat:['s7','verbe'] },
+  { heb:'רוֹאֶה',      trans:"ro'e",     fr:'voit (m.)',           cat:['s7','verbe'] },
+  { heb:'לִרְאוֹת',    trans:"lir'ot",   fr:'voir',                cat:['s7','verbe'] },
+  { heb:'שׁוֹתֶה',     trans:"shote",    fr:'boit (m.)',           cat:['s7','verbe'] },
+  { heb:'לִשְׁתּוֹת',  trans:"lishtot",  fr:'boire',               cat:['s7','verbe'] },
+  { heb:'עוֹשֶׂה',     trans:"'ose",     fr:'fait (m.)',           cat:['s7','verbe'] },
+  { heb:'לַעֲשׂוֹת',   trans:"la'asot",  fr:'faire',               cat:['s7','verbe'] },
+  { heb:'עוֹלֶה',      trans:"'ole",     fr:'monte / coûte (m.)', cat:['s7','verbe'] },
+  { heb:'לַעֲלוֹת',    trans:"la'alot",  fr:'monter / coûter',    cat:['s7','verbe'] },
+  { heb:'לִהְיוֹת',    trans:"lihyot",   fr:'être',                cat:['s7','verbe'] },
+  { heb:'יוֹדֵעַ',     trans:"yode'a",   fr:'sait / connaît (m.)',cat:['s7','verbe'] },
+  { heb:'לָדַעַת',     trans:"lada'at",  fr:'savoir / connaître', cat:['s7','verbe'] },
+  // ── שיעור 7 ── Noms
+  { heb:'בְּחִינָה',   trans:"behina",   fr:'examen',              cat:['s7','nom'] },
+  { heb:'בְּעָיָה',    trans:"be'aya",   fr:'problème',            cat:['s7','nom'] },
+  { heb:'כּוֹבַע',     trans:"kova",     fr:'chapeau',             cat:['s7','nom'] },
+  { heb:'כַּרְטִיס',   trans:"kartis",   fr:'billet / ticket',     cat:['s7','nom'] },
+  { heb:'מַדְרִיךְ',   trans:"madrikh",  fr:'guide (m.)',          cat:['s7','nom'] },
+  { heb:'מַדְרִיכָה',  trans:"madrikha", fr:'guide (f.)',          cat:['s7','nom'] },
+  { heb:'מִלְחָמָה',   trans:"milhama",  fr:'guerre',              cat:['s7','nom'] },
+  { heb:'סִיפּוּר',    trans:"sipur",    fr:'histoire / récit',    cat:['s7','nom'] },
+  { heb:'סַנְדָּל',    trans:"sandal",   fr:'sandale',             cat:['s7','nom'] },
+  { heb:'צָבָא',       trans:"tsava",    fr:'armée',               cat:['s7','nom'] },
+  { heb:'שָׁמַיִם',    trans:"shamaim",  fr:'ciel',                cat:['s7','nom'] },
+  { heb:'שָׁנָה',      trans:"shana",    fr:'année / an',          cat:['s7','nom'] },
+  { heb:'סֶרֶט',       trans:"seret",    fr:'film / ruban',        cat:['s7','nom'] },
+  { heb:'סִינֶמָטֶק',  trans:"sinematèq",fr:'cinémathèque',        cat:['s7','nom'] },
+  { heb:'הוּמוֹר',     trans:"humor",    fr:'humour',              cat:['s7','nom'] },
+  { heb:'שׁוֹקוֹ',     trans:"shoqo",    fr:'cacao / chocolat chaud',cat:['s7','nom'] },
+  { heb:'פֶּסְטִיבָל', trans:"pestival", fr:'festival',            cat:['s7','nom'] },
+  { heb:'קוֹנְפְלִיקְט',trans:"qonflixt",fr:'conflit',             cat:['s7','nom'] },
+  { heb:'כַּאפִיֶּה',  trans:"kafiye",   fr:'keffiyeh',            cat:['s7','nom'] },
+  { heb:'סְלֵנְג',     trans:"sleng",    fr:'argot / slang',       cat:['s7','nom'] },
+  // ── שיעור 7 ── Mois de l'année
+  { heb:'יָנוּאָר',    trans:"yanu'ar",  fr:'janvier',             cat:['s7','nom'] },
+  { heb:'פֶבְרוּאָר',  trans:"febrooar", fr:'février',             cat:['s7','nom'] },
+  { heb:'מָרֶס',       trans:"mares",    fr:'mars',                cat:['s7','nom'] },
+  { heb:'אַפְרִיל',    trans:"'april",   fr:'avril',               cat:['s7','nom'] },
+  { heb:'מַאי',        trans:"mai",      fr:'mai',                 cat:['s7','nom'] },
+  { heb:'יוּנִי',      trans:"yuni",     fr:'juin',                cat:['s7','nom'] },
+  { heb:'יוּלִי',      trans:"yuli",     fr:'juillet',             cat:['s7','nom'] },
+  { heb:'אוֹגוּסְט',   trans:"'ogust",   fr:'août',                cat:['s7','nom'] },
+  { heb:'סֶפְטֶמְבֶּר',trans:"september",fr:'septembre',           cat:['s7','nom'] },
+  { heb:'אוֹקְטוֹבֶּר',trans:"'oktober", fr:'octobre',             cat:['s7','nom'] },
+  { heb:'נוֹבֶמְבֶּר', trans:"november", fr:'novembre',            cat:['s7','nom'] },
+  { heb:'דֶּצֶמְבֶּר', trans:"detsember",fr:'décembre',            cat:['s7','nom'] },
+  // ── שיעור 7 ── Adjectifs
+  { heb:'אַשְׁכְּנַזִּי',trans:"'ashkenazi",fr:'ashkénaze (m.)',   cat:['s7','divers'] },
+  { heb:'מְשֻׁגָּע',   trans:"meshuga",  fr:'fou / dingue (m.)',   cat:['s7','divers'] },
+  { heb:'סְפָרַדִּי',  trans:"sfaradi",  fr:'séfarade (m.)',       cat:['s7','divers'] },
+  { heb:'עֲרָבִי',     trans:"'aravi",   fr:'arabe (m.)',          cat:['s7','divers'] },
+  { heb:'צִיּוֹנִי',   trans:"tsiyoni",  fr:'sioniste (m.)',       cat:['s7','divers'] },
+  // ── שיעור 7 ── Divers
+  { heb:'דַּי',        trans:"dai",      fr:'assez / ça suffit !', cat:['s7','divers'] },
+  { heb:'יוֹמְיוֹמִי', trans:"yomyomi",  fr:'quotidien / de tous les jours',cat:['s7','divers'] },
+  { heb:'כָּל הַ...',  trans:"kol ha...",fr:'tout le... / toute la...',cat:['s7','divers'] },
+  { heb:'מַסְפִּיק',   trans:"maspiiq",  fr:'assez / suffisant',   cat:['s7','divers'] },
+  { heb:'עַד',         trans:"'ad",      fr:'jusqu\'à',            cat:['s7','divers'] },
+  { heb:'עוֹלֶה חָדָשׁ',trans:"'ole hadash",fr:'nouvel immigrant en Israël',cat:['s7','nom'] },
+  { heb:'שׁוּם דָּבָר', trans:"shum davar",fr:'rien',              cat:['s7','divers'] },
+  { heb:'שְׁנוֹת הַחֲמִישִּׁים',trans:"shnot hahamishim",fr:'les années cinquante',cat:['s7','divers'] },
+  { heb:'שְׁנוֹת הַשִּׁישִּׁים',trans:"shnot hashishim",fr:'les années soixante',cat:['s7','divers'] },
+  { heb:'בְּהַצְלָחָה!',trans:"behatsalaha!",fr:'bonne chance !',  cat:['s7','divers'] },
+  { heb:'מִ... עַד...',trans:"mi... 'ad...",fr:'de... jusqu\'à...', cat:['s7','divers'] },
+
+  // ══════════════════════════════════
+  // ── שיעור 8 ── Noms
+  { heb:'בֵּית קָפֶה',  trans:"beyt qafe",  fr:'café / maison de café',   cat:['s8','nom'] },
+  { heb:'גְּלוּיָה',    trans:"gluya",       fr:'carte postale',            cat:['s8','nom'] },
+  { heb:'דֶּרֶךְ',      trans:"derekh",      fr:'chemin / route / façon',   cat:['s8','nom'] },
+  { heb:'חוֹלֶה',       trans:"hole",        fr:'malade (m.)',              cat:['s8','nom'] },
+  { heb:'חוֹלָה',       trans:"hola",        fr:'malade (f.)',              cat:['s8','nom'] },
+  { heb:'חוֹרֶף',       trans:"horef",       fr:'hiver',                    cat:['s8','nom'] },
+  { heb:'חַלּוֹן',      trans:"halon",       fr:'fenêtre',                  cat:['s8','nom'] },
+  { heb:'חֶשְׁבּוֹן',   trans:"heshbon",     fr:'addition / compte / facture',cat:['s8','nom'] },
+  { heb:'מִדְבָּר',     trans:"midbar",      fr:'désert',                   cat:['s8','nom'] },
+  { heb:'מֶלְצָר',      trans:"meltsar",     fr:'serveur (m.)',             cat:['s8','nom'] },
+  { heb:'מַעְיָן',      trans:"ma'yan",      fr:'source (eau)',             cat:['s8','nom'] },
+  { heb:'נוֹף',         trans:"nof",         fr:'paysage / vue',            cat:['s8','nom'] },
+  { heb:'שָׁפָה',       trans:"shafa",       fr:'langue / lèvre',           cat:['s8','nom'] },
+  { heb:'תַּרְגִּיל',   trans:"targil",      fr:'exercice',                 cat:['s8','nom'] },
+  { heb:'תַּיָּר',       trans:"tayar",       fr:'touriste (m.)',            cat:['s8','nom'] },
+  { heb:'תַּיֶּרֶת',    trans:"tayeret",     fr:'touriste (f.)',            cat:['s8','nom'] },
+  // ── שיעור 8 ── Adjectifs (noms nominaux)
+  { heb:'חַם',          trans:"ham",         fr:'chaud (m.)',               cat:['s8','divers'] },
+  { heb:'חַמָּה',       trans:"hama",        fr:'chaude (f.)',              cat:['s8','divers'] },
+  { heb:'כָּחוֹל',      trans:"kahol",       fr:'bleu (m.)',                cat:['s8','divers'] },
+  { heb:'כְּחוּלָה',    trans:"khula",       fr:'bleue (f.)',               cat:['s8','divers'] },
+  { heb:'כָּשֵׁר',      trans:"kasher",      fr:'casher (m.)',              cat:['s8','divers'] },
+  { heb:'כְּשֵׁרָה',    trans:"ksherah",     fr:'cashère (f.)',             cat:['s8','divers'] },
+  { heb:'מְשַׁעְמֵם',   trans:"mesha'amem",  fr:'ennuyeux (m.)',            cat:['s8','divers'] },
+  { heb:'מְשַׁעְמֶמֶת', trans:"mesha'amemet",fr:'ennuyeuse (f.)',           cat:['s8','divers'] },
+  { heb:'קַר',          trans:"qar",         fr:'froid (m.)',               cat:['s8','divers'] },
+  { heb:'קָרָה',        trans:"qara",        fr:'froide (f.)',              cat:['s8','divers'] },
+  { heb:'קָשֶׁה',       trans:"qashe",       fr:'difficile / dur',          cat:['s8','divers'] },
+  { heb:'שָׁקֵט',       trans:"shaqet",      fr:'calme / silencieux (m.)', cat:['s8','divers'] },
+  { heb:'שְׁקֵטָה',     trans:"shqeta",      fr:'calme / silencieuse (f.)',cat:['s8','divers'] },
+  // ── שיעור 8 ── Verbes
+  { heb:'יוֹרֵד',       trans:"yored",       fr:'descend (m.)',             cat:['s8','verbe'] },
+  { heb:'לָרֶדֶת',      trans:"laredet",     fr:'descendre',                cat:['s8','verbe'] },
+  // ── שיעור 8 ── Slang / expressions
+  { heb:'אַחְלָה',      trans:"'ahla",       fr:'super ! / génial !',       cat:['s8','divers'] },
+  { heb:'בְּכֵיף',      trans:"bekheif",     fr:'avec plaisir',             cat:['s8','divers'] },
+  { heb:'וָואלָה',      trans:"wa'ala",      fr:'vraiment ! / c\'est ça !', cat:['s8','divers'] },
+  { heb:'מָה פִּתְאוֹם?!',trans:"ma pit'om?", fr:'pas du tout ! / comment ça ?', cat:['s8','divers'] },
+  { heb:'פִּתְאוֹם',    trans:"pit'om",      fr:'soudain / tout à coup',    cat:['s8','divers'] },
+  { heb:'תָּמִיד',      trans:"tamid",       fr:'toujours',                 cat:['s8','divers'] },
+  { heb:'לְבַרִיאוּת!', trans:"levri'ut!",   fr:'à ta santé ! (éternuement)', cat:['s8','divers'] },
+  { heb:'בָּר',         trans:"bar",         fr:'bar / pub (restauration)', cat:['s8','nom'] },
+  { heb:'בְּאֶמְצַע',   trans:"be'emtsa",   fr:'au milieu (de)',           cat:['s8','divers'] },
+  { heb:'בְּעוֹד',      trans:"be'od",       fr:'dans (durée)',             cat:['s8','divers'] },
+  { heb:'הַבַּיְתָה',   trans:"habayeta",    fr:'à la maison / vers chez soi',cat:['s8','divers'] },
+  { heb:'חוּ״ל',        trans:"hul",         fr:'l\'étranger (hors d\'Israël)',cat:['s8','divers'] },
+  { heb:'כְּבָר',       trans:"kvar",        fr:'déjà',                     cat:['s8','divers'] },
+  // ── שיעור 8 ── Mots étrangers
+  { heb:'בּוּרֶקָס',    trans:"bureqas",     fr:'boureks',                  cat:['s8','nom'] },
+  { heb:'טְרַמְפּ',     trans:"tramp",       fr:'auto-stop',                cat:['s8','nom'] },
+  { heb:'מִינֶרָל',     trans:"mineral",     fr:'minéral',                  cat:['s8','nom'] },
+  { heb:'פִּיצָה',      trans:"pitsa",       fr:'pizza',                    cat:['s8','nom'] },
+  { heb:'פַּסְטָה פֶּסְטוֹ',trans:"pasta pesto",fr:'pasta pesto',          cat:['s8','nom'] },
+  { heb:'אֶלֶגַנְטִי',  trans:"eleganti",    fr:'élégant (m.)',             cat:['s8','divers'] },
+
+  // ══════════════════════════════════
+  // ── שיעור 9 ── Verbes (גזרת פ״י / שלמים בניין פיעל)
+  { heb:'מְדַבֵּר',     trans:"medaber",     fr:'parle (m.)',               cat:['s9','verbe'] },
+  { heb:'לְדַבֵּר',     trans:"ledaber",     fr:'parler',                   cat:['s9','verbe'] },
+  { heb:'מְחַפֵּשׂ',    trans:"mehapes",     fr:'cherche (m.)',             cat:['s9','verbe'] },
+  { heb:'לְחַפֵּשׂ',    trans:"lehapes",     fr:'chercher',                 cat:['s9','verbe'] },
+  { heb:'מְטַיֵּל',     trans:"metayel",     fr:'se promène / randonne (m.)',cat:['s9','verbe'] },
+  { heb:'לְטַיֵּל',     trans:"letayel",     fr:'se promener / randonner',  cat:['s9','verbe'] },
+  { heb:'מְקַבֵּל',     trans:"meqabel",     fr:'reçoit / accepte (m.)',   cat:['s9','verbe'] },
+  { heb:'לְקַבֵּל',     trans:"leqabel",     fr:'recevoir / accepter',      cat:['s9','verbe'] },
+  { heb:'מְשַׁלֵּם',    trans:"meshalem",    fr:'paie / règle (m.)',        cat:['s9','verbe'] },
+  { heb:'לְשַׁלֵּם',    trans:"leshalem",    fr:'payer / régler',           cat:['s9','verbe'] },
+  { heb:'מְשַׂחֵק',     trans:"mesaheq",     fr:'joue (m.)',                cat:['s9','verbe'] },
+  { heb:'לְשַׂחֵק',     trans:"lesaheq",     fr:'jouer',                    cat:['s9','verbe'] },
+  // ── שיעור 9 ── Noms (fruits, légumes, nourriture)
+  { heb:'גְּבִינָה',    trans:"gevina",      fr:'fromage',                  cat:['s9','nom'] },
+  { heb:'גַּנָּן',       trans:"ganan",       fr:'jardinier (m.)',           cat:['s9','nom'] },
+  { heb:'זַיִת',        trans:"zayit",       fr:'olive',                    cat:['s9','nom'] },
+  { heb:'יֶרֶק',        trans:"yereq",       fr:'légume',                   cat:['s9','nom'] },
+  { heb:'יְרָקוֹת',     trans:"yeraqot",     fr:'légumes',                  cat:['s9','nom'] },
+  { heb:'מְסִיבָּה',    trans:"mesiba",      fr:'fête / soirée',            cat:['s9','nom'] },
+  { heb:'עַגְבָנִיָּה', trans:"'agvaniya",   fr:'tomate',                   cat:['s9','nom'] },
+  { heb:'פֶּרַח',       trans:"perah",       fr:'fleur',                    cat:['s9','nom'] },
+  { heb:'פְּרָחִים',    trans:"prahim",      fr:'fleurs',                   cat:['s9','nom'] },
+  { heb:'פְּרִי',       trans:"pri",         fr:'fruit',                    cat:['s9','nom'] },
+  { heb:'פֵּרוֹת',      trans:"perot",       fr:'fruits',                   cat:['s9','nom'] },
+  { heb:'קַנְיוֹן',     trans:"qanyon",      fr:'centre commercial',        cat:['s9','nom'] },
+  { heb:'שׁוּק',        trans:"shuq",        fr:'marché',                   cat:['s9','nom'] },
+  // ── שיעור 9 ── Adjectifs
+  { heb:'בָּרִיא',       trans:"bari",        fr:'sain / en bonne santé (m.)',cat:['s9','divers'] },
+  { heb:'בְּרִיאָה',     trans:"bri'a",       fr:'saine / en bonne santé (f.)',cat:['s9','divers'] },
+  { heb:'מָתוֹק',        trans:"matok",       fr:'doux / sucré (m.)',        cat:['s9','divers'] },
+  { heb:'מְתוּקָה',      trans:"metuga",      fr:'douce / sucrée (f.)',      cat:['s9','divers'] },
+  // ── שיעור 9 ── Verbes supplémentaires
+  { heb:'שָׂם',          trans:"sam",         fr:'met / pose (m.)',          cat:['s9','verbe'] },
+  { heb:'לָשִׂים',       trans:"lasim",       fr:'mettre / poser',           cat:['s9','verbe'] },
+  // ── שיעור 9 ── Mots étrangers
+  { heb:'אוֹפֶּרָה',     trans:"'opera",      fr:'opéra',                    cat:['s9','nom'] },
+  { heb:'טוּנָה',        trans:"tuna",        fr:'thon',                     cat:['s9','nom'] },
+  { heb:'סֶלֶרִי',       trans:"seleri",      fr:'céleri',
+                                                                              cat:['s9','nom'] },
+  { heb:'צֶ׳ק',          trans:"tseq",        fr:'chèque',                   cat:['s9','nom'] },
+  // ── שיעור 9 ── Nombres féminins 11-20
+  { heb:'אַחַת עֶשְׂרֵה',trans:"'ahat 'esre", fr:'onze (f.)',                cat:['s9','divers'] },
+  { heb:'שְׁתֵּים עֶשְׂרֵה',trans:"shteim 'esre",fr:'douze (f.)',             cat:['s9','divers'] },
+  { heb:'שְׁלוֹשׁ עֶשְׂרֵה',trans:"shlosh 'esre",fr:'treize (f.)',           cat:['s9','divers'] },
+  { heb:'אַרְבַּע עֶשְׂרֵה',trans:"'arba 'esre",fr:'quatorze (f.)',          cat:['s9','divers'] },
+  { heb:'חֲמֵשׁ עֶשְׂרֵה',trans:"hamesh 'esre",fr:'quinze (f.)',             cat:['s9','divers'] },
+  { heb:'שֵׁשׁ עֶשְׂרֵה', trans:"shesh 'esre", fr:'seize (f.)',              cat:['s9','divers'] },
+  { heb:'שְׁבַע עֶשְׂרֵה',trans:"shva 'esre",  fr:'dix-sept (f.)',           cat:['s9','divers'] },
+  { heb:'שְׁמוֹנֶה עֶשְׂרֵה',trans:"shmone 'esre",fr:'dix-huit (f.)',        cat:['s9','divers'] },
+  { heb:'תְּשַׁע עֶשְׂרֵה',trans:"tsha 'esre", fr:'dix-neuf (f.)',           cat:['s9','divers'] },
+  { heb:'עֶשְׂרִים',     trans:"'esrim",      fr:'vingt',                    cat:['s9','divers'] },
+  // ── שיעור 9 ── Divers
+  { heb:'בְּהַצְלָחָה!', trans:"behatsalaha!",fr:'bonne chance !',           cat:['s9','divers'] },
+  { heb:'לֹא חָשׁוּב',   trans:"lo hashov",   fr:'peu importe / sans importance',cat:['s9','divers'] },
+  { heb:'סוֹף שָׁבוּעַ', trans:"sof shavu'a", fr:'week-end',                 cat:['s9','nom'] },
+  { heb:'בֶּן כַּמָּה?', trans:"ben kama?",   fr:'quel âge as-tu ? (m.)',    cat:['s9','question'] },
+  { heb:'בַּת כַּמָּה?', trans:"bat kama?",   fr:'quel âge as-tu ? (f.)',    cat:['s9','question'] },
+  { heb:'מָה קָרָה?',    trans:"ma qara?",    fr:'qu\'est-ce qui s\'est passé ?',cat:['s9','question'] },
+];
+
+// ═══════════════════════════════════════════════════════
+// UTILITAIRES
+// ═══════════════════════════════════════════════════════
+function shuffle(arr){
+  const a=[...arr];
+  for(let i=a.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [a[i],a[j]]=[a[j],a[i]];
+  }
+  return a;
+}
+function getRandom(arr,n){ return shuffle(arr).slice(0,n); }
+
+// ── Filtrage global
+let activeCatsLex = ['all'];
+let activeCatsVF  = ['all'];
+let activeCatsQCM = ['all'];
+let activeCatsAss = ['all'];
+
+function getFiltered(activeCats){
+  if(activeCats.includes('all')) return VOCAB;
+  return VOCAB.filter(v => v.cat.some(c => activeCats.includes(c)));
+}
+
+// ═══════════════════════════════════════════════════════
+// TABS
+// ═══════════════════════════════════════════════════════
+function switchTab(id){
+  document.querySelectorAll('.tab-content').forEach(el=>el.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(el=>el.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
+  event.currentTarget.classList.add('active');
+}
+
+// ═══════════════════════════════════════════════════════
+// LEXIQUE
+// ═══════════════════════════════════════════════════════
+function renderLexique(){
+  const grid=document.getElementById('vocab-grid');
+  const filtered=getFiltered(activeCatsLex);
+  grid.innerHTML='';
+  filtered.forEach(v=>{
+    const card=document.createElement('div');
+    card.className='vocab-card';
+    card.innerHTML=`
+      <div>
+        <div class="v-heb">${v.heb}</div>
+        <div class="v-trans">${v.trans}</div>
+      </div>
+      <span class="v-sep">·</span>
+      <div class="v-fr">${v.fr}</div>`;
+    grid.appendChild(card);
+  });
+}
+function filterCat(btn,cat){
+  document.querySelectorAll('#tab-lexique .cat-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  activeCatsLex=[cat];
+  renderLexique();
+}
+function selectAll(){
+  activeCatsLex=['all'];
+  document.querySelectorAll('#tab-lexique .cat-btn').forEach(b=>b.classList.add('active'));
+  renderLexique();
+}
+function clearAll(){
+  activeCatsLex=[];
+  document.querySelectorAll('#tab-lexique .cat-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('vocab-grid').innerHTML='<p style="font-style:italic;color:var(--ink-light);padding:12px;">Sélectionnez au moins une catégorie.</p>';
+}
+
+// ═══════════════════════════════════════════════════════
+// VRAI / FAUX
+// ═══════════════════════════════════════════════════════
+let vfQueue=[], vfIdx=0, vfCorrect=0;
+
+function toggleVFCat(btn,cat){
+  if(cat==='all'){
+    activeCatsVF=['all'];
+    document.querySelectorAll('#vf-cats .cat-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+  } else {
+    activeCatsVF=activeCatsVF.filter(c=>c!=='all');
+    btn.classList.toggle('active');
+    activeCatsVF=activeCatsVF.includes(cat)?activeCatsVF.filter(c=>c!==cat):[...activeCatsVF,cat];
+    if(activeCatsVF.length===0){ activeCatsVF=['all']; document.querySelector('#vf-cats .cat-btn[data-cat="all"]').classList.add('active'); }
+    else document.querySelector('#vf-cats .cat-btn[data-cat="all"]').classList.remove('active');
+  }
+  initVF();
+}
+function selectAllVF(){ activeCatsVF=['all']; document.querySelectorAll('#vf-cats .cat-btn').forEach(b=>b.classList.add('active')); initVF(); }
+function clearAllVF(){ activeCatsVF=['all']; document.querySelectorAll('#vf-cats .cat-btn').forEach(b=>b.classList.remove('active')); document.querySelector('#vf-cats .cat-btn[data-cat="all"]').classList.add('active'); initVF(); }
+
+function initVF(){
+  const pool=getFiltered(activeCatsVF);
+  vfQueue=shuffle(pool);
+  vfIdx=0; vfCorrect=0;
+  document.getElementById('vf-score').textContent='0';
+  document.getElementById('vf-total').textContent=vfQueue.length;
+  document.getElementById('vf-end').style.display='none';
+  document.getElementById('vf-progress').style.width='0%';
+  renderVFCard();
+}
+
+function renderVFCard(){
+  const zone=document.getElementById('vf-card-zone');
+  if(vfIdx>=vfQueue.length){
+    zone.innerHTML='';
+    const pct=Math.round(vfCorrect/vfQueue.length*100);
+    document.getElementById('vf-end-msg').textContent=`${vfCorrect} / ${vfQueue.length} corrects (${pct}%)`;
+    document.getElementById('vf-end').style.display='block';
+    return;
+  }
+  const v=vfQueue[vfIdx];
+  // 50% vrai, 50% faux (pioche aléatoire d'un autre mot)
+  const isTrue=Math.random()>0.5;
+  let proposedFr=v.fr;
+  if(!isTrue){
+    const others=VOCAB.filter(x=>x.heb!==v.heb);
+    proposedFr=others[Math.floor(Math.random()*others.length)].fr;
+  }
+  zone.innerHTML=`
+    <div class="vf-card" id="vf-card">
+      <div class="vf-word">${v.heb}</div>
+      <div class="vf-proposed">« ${proposedFr} »</div>
+      <div class="vf-btns">
+        <button class="vf-btn vrai" onclick="answerVF(true,${isTrue})">✓ Vrai</button>
+        <button class="vf-btn faux" onclick="answerVF(false,${isTrue})">✗ Faux</button>
+      </div>
+      <div class="vf-feedback" id="vf-fb"></div>
+    </div>`;
+  const pct=Math.round(vfIdx/vfQueue.length*100);
+  document.getElementById('vf-progress').style.width=pct+'%';
+}
+
+function answerVF(userSaid, isTrue){
+  const card=document.getElementById('vf-card');
+  const fb=document.getElementById('vf-fb');
+  const correct=userSaid===isTrue;
+  card.querySelectorAll('.vf-btn').forEach(b=>b.disabled=true);
+  if(correct){
+    vfCorrect++;
+    card.classList.add('correct');
+    fb.textContent='✓ Correct !';
+    fb.style.color='var(--green)';
+  } else {
+    card.classList.add('wrong');
+    const v=vfQueue[vfIdx];
+    fb.innerHTML=`✗ &nbsp;La bonne traduction est : <span class="vf-correct-ans">${v.fr}</span>`;
+    fb.style.color='var(--red)';
+  }
+  document.getElementById('vf-score').textContent=vfCorrect;
+  vfIdx++;
+  setTimeout(()=>{
+    renderVFCard();
+    document.getElementById('vf-progress').style.width=Math.round(vfIdx/vfQueue.length*100)+'%';
+  },1400);
+}
+
+// ═══════════════════════════════════════════════════════
+// QCM
+// ═══════════════════════════════════════════════════════
+let qcmQueue=[], qcmIdx=0, qcmCorrect=0;
+
+function toggleQCMCat(btn,cat){
+  if(cat==='all'){
+    activeCatsQCM=['all'];
+    document.querySelectorAll('#qcm-cats .cat-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+  } else {
+    activeCatsQCM=activeCatsQCM.filter(c=>c!=='all');
+    btn.classList.toggle('active');
+    activeCatsQCM=activeCatsQCM.includes(cat)?activeCatsQCM.filter(c=>c!==cat):[...activeCatsQCM,cat];
+    if(activeCatsQCM.length===0){ activeCatsQCM=['all']; document.querySelector('#qcm-cats .cat-btn[data-cat="all"]').classList.add('active'); }
+    else document.querySelector('#qcm-cats .cat-btn[data-cat="all"]').classList.remove('active');
+  }
+  initQCM();
+}
+function selectAllQCM(){ activeCatsQCM=['all']; document.querySelectorAll('#qcm-cats .cat-btn').forEach(b=>b.classList.add('active')); initQCM(); }
+function clearAllQCM(){ activeCatsQCM=['all']; document.querySelectorAll('#qcm-cats .cat-btn').forEach(b=>b.classList.remove('active')); document.querySelector('#qcm-cats .cat-btn[data-cat="all"]').classList.add('active'); initQCM(); }
+
+function initQCM(){
+  const pool=getFiltered(activeCatsQCM);
+  qcmQueue=shuffle(pool);
+  qcmIdx=0; qcmCorrect=0;
+  document.getElementById('qcm-score').textContent='0';
+  document.getElementById('qcm-total').textContent=qcmQueue.length;
+  document.getElementById('qcm-end').style.display='none';
+  document.getElementById('qcm-progress').style.width='0%';
+  renderQCM();
+}
+
+function renderQCM(){
+  const zone=document.getElementById('qcm-zone');
+  if(qcmIdx>=qcmQueue.length){
+    zone.innerHTML='';
+    const pct=Math.round(qcmCorrect/qcmQueue.length*100);
+    document.getElementById('qcm-end-msg').textContent=`${qcmCorrect} / ${qcmQueue.length} corrects (${pct}%)`;
+    document.getElementById('qcm-end').style.display='block';
+    return;
+  }
+  const v=qcmQueue[qcmIdx];
+  // 4 options : la bonne + 3 distracteurs
+  const distractors=shuffle(VOCAB.filter(x=>x.heb!==v.heb)).slice(0,3);
+  const options=shuffle([v,...distractors]);
+  const pct=Math.round(qcmIdx/qcmQueue.length*100);
+  document.getElementById('qcm-progress').style.width=pct+'%';
+  zone.innerHTML=`
+    <div class="qcm-question">${v.heb}</div>
+    <div class="qcm-opts" id="qcm-opts">
+      ${options.map((o,i)=>`
+        <button class="qcm-opt" id="qcm-opt-${i}" onclick="answerQCM(${i},${options.indexOf(v)},${i})">
+          ${o.fr}
+        </button>`).join('')}
+    </div>
+    <button class="qcm-next" id="qcm-next" onclick="nextQCM()" disabled>Suivant →</button>`;
+}
+
+function answerQCM(chosen, correct){
+  document.querySelectorAll('.qcm-opt').forEach((b,i)=>{
+    b.disabled=true;
+    if(i===correct) b.classList.add('correct');
+    else if(i===chosen) b.classList.add('wrong');
+  });
+  if(chosen===correct){ qcmCorrect++; document.getElementById('qcm-score').textContent=qcmCorrect; }
+  document.getElementById('qcm-next').disabled=false;
+  qcmIdx++;
+}
+function nextQCM(){ renderQCM(); }
+
+// ═══════════════════════════════════════════════════════
+// ASSOCIATION
+// ═══════════════════════════════════════════════════════
+let assocPairs=[], assocMatched=0, assocSelectedHeb=null, assocSelectedTrans=null;
+
+function toggleAssocCat(btn,cat){
+  if(cat==='all'){
+    activeCatsAss=['all'];
+    document.querySelectorAll('#assoc-cats .cat-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+  } else {
+    activeCatsAss=activeCatsAss.filter(c=>c!=='all');
+    btn.classList.toggle('active');
+    activeCatsAss=activeCatsAss.includes(cat)?activeCatsAss.filter(c=>c!==cat):[...activeCatsAss,cat];
+    if(activeCatsAss.length===0){ activeCatsAss=['all']; document.querySelector('#assoc-cats .cat-btn[data-cat="all"]').classList.add('active'); }
+    else document.querySelector('#assoc-cats .cat-btn[data-cat="all"]').classList.remove('active');
+  }
+  initAssoc();
+}
+function selectAllAssoc(){ activeCatsAss=['all']; document.querySelectorAll('#assoc-cats .cat-btn').forEach(b=>b.classList.add('active')); initAssoc(); }
+function clearAllAssoc(){ activeCatsAss=['all']; document.querySelectorAll('#assoc-cats .cat-btn').forEach(b=>b.classList.remove('active')); document.querySelector('#assoc-cats .cat-btn[data-cat="all"]').classList.add('active'); initAssoc(); }
+
+function initAssoc(){
+  const pool=getFiltered(activeCatsAss);
+  assocPairs=getRandom(pool,Math.min(8,pool.length));
+  assocMatched=0;
+  assocSelectedHeb=null; assocSelectedTrans=null;
+  document.getElementById('assoc-score').textContent='0';
+  document.getElementById('assoc-total').textContent=assocPairs.length;
+  document.getElementById('assoc-end').style.display='none';
+  document.getElementById('assoc-feedback').textContent='';
+  renderAssoc();
+}
+
+function renderAssoc(){
+  const zone=document.getElementById('assoc-zone');
+  const hebShuf=shuffle(assocPairs);
+  const transShuf=shuffle(assocPairs);
+  zone.innerHTML=`
+    <div>
+      <div class="assoc-col-title">עברית</div>
+      <div class="assoc-col" id="assoc-heb">
+        ${hebShuf.map(v=>`<div class="assoc-item" id="ah-${v.trans}" data-key="${v.trans}" onclick="selectHeb(this,'${v.trans}')">${v.heb}</div>`).join('')}
+      </div>
+    </div>
+    <div>
+      <div class="assoc-col-title">Translittération</div>
+      <div class="assoc-col" id="assoc-trans">
+        ${transShuf.map(v=>`<div class="assoc-item trans" id="at-${v.trans}" data-key="${v.trans}" onclick="selectTrans(this,'${v.trans}')">${v.trans}</div>`).join('')}
+      </div>
+    </div>`;
+}
+
+function selectHeb(el,key){
+  if(el.classList.contains('matched')) return;
+  document.querySelectorAll('#assoc-heb .assoc-item').forEach(b=>b.classList.remove('selected'));
+  assocSelectedHeb=key;
+  el.classList.add('selected');
+  if(assocSelectedTrans) checkAssocMatch();
+}
+function selectTrans(el,key){
+  if(el.classList.contains('matched')) return;
+  document.querySelectorAll('#assoc-trans .assoc-item').forEach(b=>b.classList.remove('selected'));
+  assocSelectedTrans=key;
+  el.classList.add('selected');
+  if(assocSelectedHeb) checkAssocMatch();
+}
+function checkAssocMatch(){
+  const hEl=document.getElementById('ah-'+assocSelectedHeb);
+  const tEl=document.getElementById('at-'+assocSelectedTrans);
+  const fb=document.getElementById('assoc-feedback');
+  if(assocSelectedHeb===assocSelectedTrans){
+    hEl.classList.remove('selected'); hEl.classList.add('matched');
+    tEl.classList.remove('selected'); tEl.classList.add('matched');
+    assocMatched++;
+    document.getElementById('assoc-score').textContent=assocMatched;
+    fb.textContent='✓ Correct !'; fb.style.color='var(--green)';
+    if(assocMatched>=assocPairs.length){
+      document.getElementById('assoc-end').style.display='block';
+    }
+  } else {
+    hEl.classList.add('wrong-flash'); tEl.classList.add('wrong-flash');
+    fb.textContent='✗ Essaie encore…'; fb.style.color='var(--red)';
+    setTimeout(()=>{
+      hEl.classList.remove('wrong-flash','selected');
+      tEl.classList.remove('wrong-flash','selected');
+      fb.textContent='';
+    },900);
+  }
+  assocSelectedHeb=null; assocSelectedTrans=null;
+}
+
+// ═══════════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════════
+renderLexique();
+initVF();
+initQCM();
+initAssoc();
+</script>
+</body>
+</html>
